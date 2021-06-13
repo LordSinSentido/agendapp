@@ -7,7 +7,7 @@
     tools:context=".MenuPrincipalActivity">
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+        android:id="@+id/menuprincipalTabLayoutPestannas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimario"
@@ -19,11 +19,11 @@
         app:tabTextColor="@color/colorTextoClaro">
 
         <com.google.android.material.tabs.TabItem
-            android:id="@+id/menuprincipalTabItemProxima"
+            android:id="@+id/menuprincipalTabItemProximos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/icono_proxima"
-            android:text="@string/menuprincipalTabItemproxima" />
+            android:icon="@drawable/icono_proximos"
+            android:text="@string/menuprincipalTabItemProximos" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/menuprincipalTabItemTareas"
@@ -47,18 +47,13 @@
             android:text="@string/menuprincipalTabItemEventos" />
     </com.google.android.material.tabs.TabLayout>
 
-    <ScrollView
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/menuprincipalViewPagerActividades"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/menuprincipalTabLayoutPestannas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
