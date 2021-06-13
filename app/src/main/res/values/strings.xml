@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Agendapp</string>
+
+    <!-- Menu principal -->
+    <string name="menuprincipalTabItemproxima">Proxima</string>
+    <string name="menuprincipalTabItemTareas">Tareas</string>
+    <string name="menuprincipalTabItemHorario">Horario</string>
+    <string name="menuprincipalTabItemEventos">Eventos</string>
 </resources>
