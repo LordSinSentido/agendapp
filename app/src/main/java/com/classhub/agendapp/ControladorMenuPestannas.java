@@ -19,8 +19,16 @@ public class ControladorMenuPestannas extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
+                return new ProximosFragment();
+            case 1:
+                return new TareasFragment();
+            case 2:
+                return new HorariosFragment();
+            case 3:
+                return new EventosFragment();
+            default:
+                return null;
         }
-        return null;
     }
 
     @Override
