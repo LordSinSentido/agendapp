@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.View;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 public class MenuPrincipalActivity extends AppCompatActivity {
     private TabLayout pestannas;
     private ViewPager actividades;
+    private FloatingActionButton agregar;
     ControladorMenuPestannas controlador;
 
     @Override
@@ -19,6 +23,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
         pestannas = findViewById(R.id.menuprincipalTabLayoutPestannas);
         actividades = findViewById(R.id.menuprincipalViewPagerActividades);
+        agregar = findViewById(R.id.menuprincipalBotonAgregar);
 
         controlador = new ControladorMenuPestannas(getSupportFragmentManager(), pestannas.getTabCount());
         actividades.setAdapter(controlador);
@@ -55,5 +60,12 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             }
         });
         actividades.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(pestannas));
+
+        agregar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Banner de prueba", Snackbar.LENGTH_SHORT).setAction("???", null).show();
+            }
+        });
     }
 }

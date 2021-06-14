@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MenuPrincipalActivity">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menuprincipalBotonAgregar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/colorSecundario"
+        android:clickable="true"
+        android:elevation="25dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorSecundarioClaro"
+        app:srcCompat="@drawable/icono_agregar" />
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/menuprincipalTabLayoutPestannas"
         android:layout_width="match_parent"
