@@ -6,6 +6,11 @@
     <string name="menuprincipalTabItemTareas">Tareas</string>
     <string name="menuprincipalTabItemHorario">Horario</string>
     <string name="menuprincipalTabItemEventos">Eventos</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Botones -->
+    <string name="botonAgregar">Agregar</string>
+
 </resources>
