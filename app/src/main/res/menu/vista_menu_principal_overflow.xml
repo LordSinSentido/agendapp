@@ -5,7 +5,7 @@
     <item
         android:id="@+id/vistamenuprincipalItemConfiguraciones"
         android:checkable="false"
-        android:icon="@drawable/icono_configuraciones"
+        android:icon="@drawable/icono_configuracion"
         android:title="@string/botonConfiguraciones"
         app:showAsAction="always" />
 </menu>
