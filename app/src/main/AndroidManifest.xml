@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Agendapp">
-        <activity android:name=".ConfiguracionesActivity"></activity>
+        <activity android:name=".AgregarHorariosActivity"></activity>
+        <activity android:name=".AgregarEventosActivity" />
+        <activity android:name=".AgregarTareasActivity" />
+        <activity android:name=".ConfiguracionesActivity" />
         <activity android:name=".MenuPrincipalActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

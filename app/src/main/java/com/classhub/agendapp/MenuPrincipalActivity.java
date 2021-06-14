@@ -91,7 +91,42 @@ public class MenuPrincipalActivity extends AppCompatActivity {
                 }
             }
         });
-
+        agregarTarea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent IraAgregarTarea = new Intent (MenuPrincipalActivity.this, AgregarTareasActivity.class);
+                startActivity(IraAgregarTarea);
+                agregar.setRotation(0);
+                agregarTarea.setVisibility(View.INVISIBLE);
+                agregarEvento.setVisibility(View.INVISIBLE);
+                agregarHorario.setVisibility(View.INVISIBLE);
+                estadoBotonAgregar = false;
+            }
+        });
+        agregarEvento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent IraAgregarEvento = new Intent(MenuPrincipalActivity.this, AgregarEventosActivity.class);
+                startActivity(IraAgregarEvento);
+                agregar.setRotation(0);
+                agregarTarea.setVisibility(View.INVISIBLE);
+                agregarEvento.setVisibility(View.INVISIBLE);
+                agregarHorario.setVisibility(View.INVISIBLE);
+                estadoBotonAgregar = false;
+            }
+        });
+        agregarHorario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent IraAgregarHorario = new Intent(MenuPrincipalActivity.this, AgregarHorariosActivity.class);
+                startActivity(IraAgregarHorario);
+                agregar.setRotation(0);
+                agregarTarea.setVisibility(View.INVISIBLE);
+                agregarEvento.setVisibility(View.INVISIBLE);
+                agregarHorario.setVisibility(View.INVISIBLE);
+                estadoBotonAgregar = false;
+            }
+        });
     }
 
     public boolean onCreateOptionsMenu (Menu menu){
