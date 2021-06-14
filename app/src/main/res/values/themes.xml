@@ -1,8 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Theme.Agendapp" parent="Theme.MaterialComponents.DayNight">
+    <style name="Theme.Agendapp" parent="Theme.AppCompat.DayNight">
         <item name="colorPrimary">@color/colorPrimario</item>
         <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimario</item>
         <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="actionButtonStyle">@color/colorTextoClaro</item>
     </style>
 
     <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
@@ -12,13 +13,12 @@
     </style>
 
     <style name="ActionBarTitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:textColor">@color/colorSecundario</item>
+        <item name="android:textColor">@color/colorTextoClaro</item>
     </style>
 
     <style name="BotonPrimario" parent="Widget.AppCompat.Button">
         <item name="background">@color/colorSecundario</item>
-        <item name="backgroundColor">@color/colorSecundario</item>
-        <item name="android:textColor">@color/colorSecundario</item>
+        <item name="android:textColor">@color/colorTextoClaro</item>
     </style>
 
 </resources>

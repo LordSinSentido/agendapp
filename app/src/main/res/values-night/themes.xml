@@ -1,22 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.Agendapp" parent="Theme.MaterialComponents.DayNight">
-        <!-- Primary brand color. -->
+    <style name="Theme.Agendapp" parent="Theme.AppCompat.DayNight">
         <item name="colorPrimary">@color/colorPrimario</item>
-        <item name="colorPrimaryVariant">@color/colorPrimarioClaro</item>
-        <item name="colorOnPrimary">@color/colorPrimarioOscuro</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/colorSecundario</item>
-        <item name="colorSecondaryVariant">@color/colorSecundarioClaro</item>
-        <item name="colorOnSecondary">@color/colorSecundarioOscuro</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimario</item>
         <item name="actionBarStyle">@style/ActionBarStyle</item>
-        <!-- Customize your theme here. -->
+        <item name="actionButtonStyle">@color/colorTextoClaro</item>
     </style>
-    
+
     <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="background">@color/colorPrimario</item>
+        <item name="elevation">0dp</item>
+        <item name="titleTextStyle">@style/ActionBarTitleTextStyle</item>
+    </style>
+
+    <style name="ActionBarTitleTextStyle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
         <item name="android:textColor">@color/colorTextoClaro</item>
+    </style>
+
+    <style name="BotonPrimario" parent="Widget.AppCompat.Button">
+        <item name="background">@color/colorSecundario</item>
+        <item name="android:textColor">@color/colorTextoClaro</item>
+    </style>
+
+    <style name="BotonFlotante" parent="Widget.Design.FloatingActionButton">
+        <item name="background">@color/colorSecundario</item>
     </style>
 
 </resources>
