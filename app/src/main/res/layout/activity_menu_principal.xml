@@ -29,10 +29,14 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimario"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:tabGravity="center"
         app:tabIconTint="@color/colorTextoClaro"
         app:tabIndicatorColor="@color/colorTextoClaro"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
         app:tabTextColor="@color/colorTextoClaro">
 
         <com.google.android.material.tabs.TabItem
