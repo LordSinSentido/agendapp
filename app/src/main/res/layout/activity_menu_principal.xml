@@ -7,6 +7,48 @@
     tools:context=".MenuPrincipalActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menuprincipalBotonAgregarHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:clickable="true"
+        android:contentDescription="@string/botonAgregarHorario"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/menuprincipalBotonAgregarEvento"
+        app:layout_constraintEnd_toEndOf="@+id/menuprincipalBotonAgregarEvento"
+        app:srcCompat="@drawable/icon_horario" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menuprincipalBotonAgregarEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:clickable="true"
+        android:contentDescription="@string/botonAgregarEvento"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/menuprincipalBotonAgregarTarea"
+        app:layout_constraintEnd_toEndOf="@+id/menuprincipalBotonAgregarTarea"
+        app:srcCompat="@drawable/icon_eventos" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/menuprincipalBotonAgregarTarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:clickable="true"
+        android:contentDescription="@string/botonAgregarTarea"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toTopOf="@+id/menuprincipalBotonAgregar"
+        app:layout_constraintEnd_toEndOf="@+id/menuprincipalBotonAgregar"
+        app:srcCompat="@drawable/icono_tareas" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/menuprincipalBotonAgregar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

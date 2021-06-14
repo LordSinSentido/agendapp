@@ -14,6 +14,12 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     private TabLayout pestannas;
     private ViewPager actividades;
     private FloatingActionButton agregar;
+    private FloatingActionButton agregarTarea;
+    private FloatingActionButton agregarEvento;
+    private FloatingActionButton agregarHorario;
+
+    private boolean estadoBotonAgregar = false;
+
     ControladorMenuPestannas controlador;
 
     @Override
@@ -24,6 +30,9 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         pestannas = findViewById(R.id.menuprincipalTabLayoutPestannas);
         actividades = findViewById(R.id.menuprincipalViewPagerActividades);
         agregar = findViewById(R.id.menuprincipalBotonAgregar);
+        agregarTarea = findViewById(R.id.menuprincipalBotonAgregarTarea);
+        agregarEvento = findViewById(R.id.menuprincipalBotonAgregarEvento);
+        agregarHorario = findViewById(R.id.menuprincipalBotonAgregarHorario);
 
         controlador = new ControladorMenuPestannas(getSupportFragmentManager(), pestannas.getTabCount());
         actividades.setAdapter(controlador);
@@ -64,7 +73,19 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Banner de prueba", Snackbar.LENGTH_SHORT).setAction("???", null).show();
+                if (estadoBotonAgregar) {
+                    agregar.setRotation(0);
+                    agregarTarea.setVisibility(View.INVISIBLE);
+                    agregarEvento.setVisibility(View.INVISIBLE);
+                    agregarHorario.setVisibility(View.INVISIBLE);
+                    estadoBotonAgregar = false;
+                } else {
+                    agregar.setRotation(45);
+                    agregarTarea.setVisibility(View.VISIBLE);
+                    agregarEvento.setVisibility(View.VISIBLE);
+                    agregarHorario.setVisibility(View.VISIBLE);
+                    estadoBotonAgregar = true;
+                }
             }
         });
     }

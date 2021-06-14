@@ -12,5 +12,8 @@
 
     <!-- Botones -->
     <string name="botonAgregar">Agregar</string>
+    <string name="botonAgregarTarea">Agregar tarea</string>
+    <string name="botonAgregarEvento">Agregar evento</string>
+    <string name="botonAgregarHorario">Agregar horario</string>
 
 </resources>
