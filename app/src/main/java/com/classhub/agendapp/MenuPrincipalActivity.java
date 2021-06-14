@@ -3,7 +3,10 @@ package com.classhub.agendapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -88,5 +91,16 @@ public class MenuPrincipalActivity extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    public boolean onCreateOptionsMenu (Menu menu){
+        getMenuInflater().inflate(R.menu.vista_menu_principal_overflow, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected (MenuItem item){
+        Intent configuraciones = new Intent(this, ConfiguracionesActivity.class);
+        startActivity(configuraciones);
+        return super.onOptionsItemSelected(item);
     }
 }
