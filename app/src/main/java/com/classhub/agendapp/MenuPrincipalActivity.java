@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 public class MenuPrincipalActivity extends AppCompatActivity {
@@ -23,7 +22,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
     private boolean estadoBotonAgregar = false;
 
-    ControladorMenuPestannas controlador;
+    ControladorMenuPestannasClass controlador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +36,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         agregarEvento = findViewById(R.id.menuprincipalBotonAgregarEvento);
         agregarHorario = findViewById(R.id.menuprincipalBotonAgregarHorario);
 
-        controlador = new ControladorMenuPestannas(getSupportFragmentManager(), pestannas.getTabCount());
+        controlador = new ControladorMenuPestannasClass(getSupportFragmentManager(), pestannas.getTabCount());
         actividades.setAdapter(controlador);
 
         pestannas.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -133,6 +132,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.vista_menu_principal_overflow, menu);
         return true;
     }
+
     public boolean onOptionsItemSelected (MenuItem item){
         Intent configuraciones = new Intent(this, ConfiguracionesActivity.class);
         startActivity(configuraciones);

@@ -10,43 +10,55 @@
         android:id="@+id/menuprincipalBotonAgregarHorario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
         android:contentDescription="@string/botonAgregarHorario"
         android:focusable="true"
+        android:tint="@color/colorTextoClaro"
         android:visibility="invisible"
-        app:fabSize="mini"
+        app:backgroundTint="@color/colorPrimario"
+        app:fabSize="normal"
         app:layout_constraintBottom_toTopOf="@+id/menuprincipalBotonAgregarEvento"
         app:layout_constraintEnd_toEndOf="@+id/menuprincipalBotonAgregarEvento"
-        app:srcCompat="@drawable/icon_horario" />
+        app:rippleColor="@color/colorPrimarioClaro"
+        app:srcCompat="@drawable/icon_horario"
+        tools:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/menuprincipalBotonAgregarEvento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
         android:contentDescription="@string/botonAgregarEvento"
         android:focusable="true"
+        android:tint="@color/colorTextoClaro"
         android:visibility="invisible"
-        app:fabSize="mini"
+        app:backgroundTint="@color/colorSecundario"
+        app:fabSize="normal"
         app:layout_constraintBottom_toTopOf="@+id/menuprincipalBotonAgregarTarea"
         app:layout_constraintEnd_toEndOf="@+id/menuprincipalBotonAgregarTarea"
-        app:srcCompat="@drawable/icon_eventos" />
+        app:rippleColor="@color/colorSecundarioClaro"
+        app:srcCompat="@drawable/icon_eventos"
+        tools:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/menuprincipalBotonAgregarTarea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
         android:contentDescription="@string/botonAgregarTarea"
         android:focusable="true"
+        android:tint="@color/colorTextoClaro"
         android:visibility="invisible"
-        app:fabSize="mini"
+        app:backgroundTint="@color/colorSecundarioOscuro"
+        app:fabSize="normal"
         app:layout_constraintBottom_toTopOf="@+id/menuprincipalBotonAgregar"
         app:layout_constraintEnd_toEndOf="@+id/menuprincipalBotonAgregar"
-        app:srcCompat="@drawable/icono_tareas" />
+        app:rippleColor="@color/colorSecundarioClaro"
+        app:srcCompat="@drawable/icono_tareas"
+        tools:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/menuprincipalBotonAgregar"
@@ -59,6 +71,8 @@
         android:contentDescription="@string/botonAgregar"
         android:elevation="25dp"
         android:focusable="true"
+        android:tint="@color/colorTextoClaro"
+        app:backgroundTint="@color/colorSecundario"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
