@@ -5,6 +5,8 @@ public class ActividadDatos {
     private String descripcion;
     private int imagen;
 
+    public ActividadDatos(){}
+
     public ActividadDatos(String titulo, String descripcion, int imagen) {
         this.titulo = titulo;
         this.descripcion = descripcion;
@@ -18,5 +20,5 @@ public class ActividadDatos {
     public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
 
     public int getImagen() { return imagen; }
-    public void setImagen(int foto) { this.imagen = imagen; }
+    public void setImagen(int imagen) { this.imagen = imagen; }
 }

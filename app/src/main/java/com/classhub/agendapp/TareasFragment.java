@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -31,6 +33,8 @@ public class TareasFragment extends Fragment {
 
     RecyclerView recyclerTareas;
     ArrayList<ActividadDatos> listaActividades;
+    BaseDeDatosControlador admin;
+    int cantidad = 0;
 
     public TareasFragment() {
         // Required empty public constructor
@@ -68,11 +72,31 @@ public class TareasFragment extends Fragment {
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_tareas, container, false);
 
+        admin = new BaseDeDatosControlador(getContext(), "baseDeDatos.db", null, 1);
+
+        ActividadDatos actividadDatos = null;
         listaActividades = new ArrayList<>();
         recyclerTareas = vista.findViewById(R.id.recyclerIdTareas);
         recyclerTareas.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        llenarLista();
+        SQLiteDatabase db = admin.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM tareas", null);
+
+        cantidad = cursor.getCount();
+
+        if(cantidad>0){
+            cursor.moveToFirst();
+            do{
+                actividadDatos = new ActividadDatos();
+                actividadDatos.setTitulo(cursor.getString(1));
+                actividadDatos.setDescripcion(cursor.getString(2));
+                actividadDatos.setImagen(R.drawable.icono_tareas);
+                listaActividades.add(actividadDatos);
+            }while(cursor.moveToNext());
+        }
+        else
+            Toast.makeText(getContext(), "No se encontraron registros.", Toast.LENGTH_SHORT).show();
+        db.close();
 
         AdapterDatosProximos adpater = new AdapterDatosProximos(listaActividades);
         adpater.setOnClickListener(new View.OnClickListener() {
@@ -86,9 +110,5 @@ public class TareasFragment extends Fragment {
         recyclerTareas.setAdapter(adpater);
 
         return vista;
-    }
-
-    private void llenarLista() {
-        listaActividades.add(new ActividadDatos("Matemáticas", "Entregar los ejercicios de la página 34 y 35", R.drawable.icono_tareas));
     }
 }
