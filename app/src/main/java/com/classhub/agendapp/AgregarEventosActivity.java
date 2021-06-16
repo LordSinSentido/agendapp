@@ -131,7 +131,7 @@ public class AgregarEventosActivity extends AppCompatActivity {
 
             if (baseDeDatos != null) {
                 try {
-                    baseDeDatos.insert("evento", null, datosAGuardar);
+                    baseDeDatos.insert("eventos", null, datosAGuardar);
                     baseDeDatos.close();
                     finish();
                 } catch (SQLException e){
