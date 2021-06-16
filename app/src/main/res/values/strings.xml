@@ -7,13 +7,24 @@
     <string name="menuprincipalTabItemHorario">Horario</string>
     <string name="menuprincipalTabItemEventos">Eventos</string>
 
-    <!-- Agregar tareas -->
+    <!-- Agregar tarea -->
     <string name="agregartareaTitulo">Nombre de la materia</string>
     <string name="agregartareaDescripcion">Descripcion</string>
     <string name="agregartareaFechaDeFin">Fecha de entrega</string>
     <string name="agregartareaHoraDeFin">Hora de entrega</string>
     <string name="agregartareaTipo">Selecciona el tipo de actividad</string>
     <string name="agregartareaRecordatorio">Agregar recordatorio</string>
+
+    <!-- Agregar evento -->
+    <string name="agregareventoTitulo">Titulo</string>
+    <string name="agregareventoDescripcion">Descripcion</string>
+    <string name="agregareventoFechaDeInicio">Fecha de inicio</string>
+    <string name="agregareventoHoraDeInicio">Hora de inicio</string>
+    <string name="agregareventoFechaDeFin">Fecha de finalizacion</string>
+    <string name="agregareventoHoraDeFin">Hora de finalizacion</string>
+    <string name="agregareventoUbicacion">Ubicacion</string>
+    <string name="agregareventoTipo">Selecciona el tipo de evento</string>
+    <string name="agregareventoRecordatorio">Agregar recordatorio</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
