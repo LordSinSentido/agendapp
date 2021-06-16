@@ -5,27 +5,9 @@
     android:layout_height="match_parent"
     tools:context=".ProximosFragment">
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerIdProximos"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingTop="16dp">
-
-        <TextView
-            android:id="@+id/proximoFragmentTextViewMomento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="En este momento"
-            android:textSize="25dp"/>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerIdProximos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"/>
-
-    </LinearLayout>
+        android:layout_height="match_parent" />
 
 </FrameLayout>
