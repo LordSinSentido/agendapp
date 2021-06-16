@@ -3,6 +3,7 @@ package com.classhub.agendapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -70,7 +71,7 @@ public class ProximosFragment extends Fragment {
 
         listaActividades = new ArrayList<>();
         recyclerProximos = vista.findViewById(R.id.recyclerIdProximos);
-        recyclerProximos.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerProximos.setLayoutManager(new GridLayoutManager(getActivity(), 1));
 
         llenarLista();
 

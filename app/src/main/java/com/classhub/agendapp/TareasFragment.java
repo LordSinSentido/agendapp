@@ -3,6 +3,7 @@ package com.classhub.agendapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -77,7 +78,7 @@ public class TareasFragment extends Fragment {
         ActividadDatos actividadDatos = null;
         listaActividades = new ArrayList<>();
         recyclerTareas = vista.findViewById(R.id.recyclerIdTareas);
-        recyclerTareas.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerTareas.setLayoutManager(new GridLayoutManager(getActivity(), 1));
 
         SQLiteDatabase db = admin.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM tareas", null);
