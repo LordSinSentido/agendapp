@@ -22,10 +22,11 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
                 android:ems="10"
                 android:hint="@string/agregareventoTitulo"
-                android:inputType="textPersonName"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/agregareventoEntradaDescripcion"
@@ -34,11 +35,12 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
                 android:ems="10"
                 android:gravity="start|top"
                 android:hint="@string/agregareventoDescripcion"
-                android:inputType="textMultiLine"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine" />
 
             <EditText
                 android:id="@+id/agregareventoEntradaFechaDeInicio"
@@ -47,10 +49,11 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
                 android:ems="10"
                 android:hint="@string/agregareventoFechaDeInicio"
-                android:inputType="date"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="date" />
 
             <EditText
                 android:id="@+id/agregareventoEntradaHoraDeInicio"
@@ -59,10 +62,11 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
                 android:ems="10"
                 android:hint="@string/agregareventoHoraDeInicio"
-                android:inputType="time"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="time" />
 
             <EditText
                 android:id="@+id/agregareventoEntradaFechaDeFin"
@@ -71,10 +75,11 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
                 android:ems="10"
                 android:hint="@string/agregareventoFechaDeFin"
-                android:inputType="date"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="date" />
 
             <EditText
                 android:id="@+id/agregareventoEntradaHoraDeFin"
@@ -83,10 +88,11 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
                 android:ems="10"
                 android:hint="@string/agregareventoHoraDeFin"
-                android:inputType="time"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="time" />
 
             <EditText
                 android:id="@+id/agregareventoEntradaUbicacion"
@@ -95,10 +101,11 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
                 android:ems="10"
                 android:hint="@string/agregareventoUbicacion"
-                android:inputType="textPersonName"
-                android:importantForAutofill="no" />
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/agregareventoTextoTipo"
@@ -115,7 +122,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="25dp" />
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_spinner" />
 
             <CheckBox
                 android:id="@+id/agregareventoCheckRecordatorio"
@@ -133,13 +141,14 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="25dp"
+                android:background="@drawable/item_spinner"
                 android:visibility="gone"
                 tools:visibility="visible" />
 
             <androidx.constraintlayout.utils.widget.MockView
                 android:id="@+id/mockView"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:visibility="invisible" />
 
         </LinearLayout>
