@@ -26,6 +26,15 @@
     <string name="agregareventoTipo">Selecciona el tipo de evento</string>
     <string name="agregareventoRecordatorio">Agregar recordatorio</string>
 
+    <!-- Agregar recordatorio -->
+    <string name="agregarhorarioTitulo">Nombre de la materia</string>
+    <string name="agregarhorarioDescripcion">Descripcion</string>
+    <string name="agregarhorarioFechaDeInicio">Fecha</string>
+    <string name="agregarhorarioHoraDeInicio">Hora de inicio</string>
+    <string name="agregarhorarioHoraDeFin">Hora de finalizacion</string>
+    <string name="agregarhorarioUbicacion">Ubicacion</string>
+    <string name="agregarhorarioRecordatorio">Agregar recordatorio</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
