@@ -6,4 +6,162 @@
     android:layout_height="match_parent"
     tools:context=".AgregarEventosActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/agregareventoEntradaTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:hint="@string/agregareventoTitulo"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/agregareventoEntradaDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/agregareventoDescripcion"
+                android:inputType="textMultiLine"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/agregareventoEntradaFechaDeInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:hint="@string/agregareventoFechaDeInicio"
+                android:inputType="date"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/agregareventoEntradaHoraDeInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:hint="@string/agregareventoHoraDeInicio"
+                android:inputType="time"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/agregareventoEntradaFechaDeFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:hint="@string/agregareventoFechaDeFin"
+                android:inputType="date"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/agregareventoEntradaHoraDeFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:hint="@string/agregareventoHoraDeFin"
+                android:inputType="time"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/agregareventoEntradaUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:hint="@string/agregareventoUbicacion"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:id="@+id/agregareventoTextoTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="@string/agregareventoTipo" />
+
+            <Spinner
+                android:id="@+id/agregareventoSpinnerTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp" />
+
+            <CheckBox
+                android:id="@+id/agregareventoCheckRecordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="@string/agregareventoRecordatorio" />
+
+            <Spinner
+                android:id="@+id/agregareventoSpinnerRecordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <androidx.constraintlayout.utils.widget.MockView
+                android:id="@+id/mockView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/agregareventoBotonGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/colorSecundario"
+        android:clickable="true"
+        android:contentDescription="@string/botonGuardar"
+        android:elevation="25dp"
+        android:focusable="true"
+        android:onClick="guardar"
+        android:tint="@color/colorTextoClaro"
+        app:backgroundTint="@color/colorSecundario"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorSecundarioClaro"
+        app:srcCompat="@drawable/icono_guardar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
