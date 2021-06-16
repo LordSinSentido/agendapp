@@ -5,10 +5,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-public class ControladorMenuPestannasClass extends FragmentPagerAdapter {
+public class MenuPestannasControlador extends FragmentPagerAdapter {
     private int numeroDePestannas;
 
-    public ControladorMenuPestannasClass(@NonNull FragmentManager fm, int behavior) {
+    public MenuPestannasControlador(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
         numeroDePestannas = behavior;
     }
