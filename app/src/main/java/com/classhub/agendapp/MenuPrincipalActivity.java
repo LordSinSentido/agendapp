@@ -22,7 +22,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
     private boolean estadoBotonAgregar = false;
 
-    MenuPestannasControlador controlador;
+    MenuPestannasControlador controladorPestannas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +36,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         agregarEvento = findViewById(R.id.menuprincipalBotonAgregarEvento);
         agregarHorario = findViewById(R.id.menuprincipalBotonAgregarHorario);
 
-        controlador = new MenuPestannasControlador(getSupportFragmentManager(), pestannas.getTabCount());
-        actividades.setAdapter(controlador);
+        controladorPestannas = new MenuPestannasControlador(getSupportFragmentManager(), pestannas.getTabCount());
+        actividades.setAdapter(controladorPestannas);
 
         pestannas.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -46,16 +46,16 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
                 switch (tab.getPosition()){
                     case 0:
-                        controlador.notifyDataSetChanged();
+                        controladorPestannas.notifyDataSetChanged();
                         break;
                     case 1:
-                        controlador.notifyDataSetChanged();
+                        controladorPestannas.notifyDataSetChanged();
                         break;
                     case 2:
-                        controlador.notifyDataSetChanged();
+                        controladorPestannas.notifyDataSetChanged();
                         break;
                     case 3:
-                        controlador.notifyDataSetChanged();
+                        controladorPestannas.notifyDataSetChanged();
                         break;
                 }
             }
