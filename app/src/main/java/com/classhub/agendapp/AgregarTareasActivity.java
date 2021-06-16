@@ -107,6 +107,8 @@ public class AgregarTareasActivity extends AppCompatActivity {
             datosAGuardar.put("titulo", titulo.getText().toString());
             if (!descripcion.getText().toString().isEmpty()) {
                 datosAGuardar.put("descripcion", descripcion.getText().toString());
+            } else {
+                datosAGuardar.put("descripcion", "");
             }
             if (auxiliarDeTipo.equals("Tarea")) {
                 datosAGuardar.put("prioridad", 1);
@@ -116,6 +118,8 @@ public class AgregarTareasActivity extends AppCompatActivity {
             datosAGuardar.put("tipo", auxiliarDeTipo);
             if (estadoDeRecordatorio.isChecked()) {
                 datosAGuardar.put("recordatorio", auxiliarDeRecordatorio);
+            } else {
+                datosAGuardar.put("recordatorio", "Sin recordatorio");
             }
             datosAGuardar.put("fechaDeFin", fechaDeFin.getText().toString());
             datosAGuardar.put("horaDeFin", horaDeFin.getText().toString());
