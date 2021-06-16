@@ -4,6 +4,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimario</item>
         <item name="actionBarStyle">@style/ActionBarStyle</item>
         <item name="actionButtonStyle">@color/colorTextoClaro</item>
+        <item name="android:windowBackground">@color/colorTextoOscuro</item>
     </style>
 
     <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
