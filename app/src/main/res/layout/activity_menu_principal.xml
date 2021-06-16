@@ -21,7 +21,7 @@
         app:layout_constraintBottom_toTopOf="@+id/menuprincipalBotonAgregarEvento"
         app:layout_constraintEnd_toEndOf="@+id/menuprincipalBotonAgregarEvento"
         app:rippleColor="@color/colorPrimarioClaro"
-        app:srcCompat="@drawable/icon_horario"
+        app:srcCompat="@drawable/icono_horario"
         tools:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -39,7 +39,7 @@
         app:layout_constraintBottom_toTopOf="@+id/menuprincipalBotonAgregarTarea"
         app:layout_constraintEnd_toEndOf="@+id/menuprincipalBotonAgregarTarea"
         app:rippleColor="@color/colorSecundarioClaro"
-        app:srcCompat="@drawable/icon_eventos"
+        app:srcCompat="@drawable/icono_eventos"
         tools:visibility="visible" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -113,14 +113,14 @@
             android:id="@+id/menuprincipalTabItemHorarios"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/icon_horario"
+            android:icon="@drawable/icono_horario"
             android:text="@string/menuprincipalTabItemHorario" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/menuprincipalTabItemEventos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:icon="@drawable/icon_eventos"
+            android:icon="@drawable/icono_eventos"
             android:text="@string/menuprincipalTabItemEventos" />
     </com.google.android.material.tabs.TabLayout>
 
