@@ -7,6 +7,14 @@
     <string name="menuprincipalTabItemHorario">Horario</string>
     <string name="menuprincipalTabItemEventos">Eventos</string>
 
+    <!-- Agregar tareas -->
+    <string name="agregartareaTitulo">Nombre de la materia</string>
+    <string name="agregartareaDescripcion">Descripcion</string>
+    <string name="agregartareaFechaDeFin">Fecha de entrega</string>
+    <string name="agregartareaHoraDeFin">Hora de entrega</string>
+    <string name="agregartareaTipo">Selecciona el tipo de actividad</string>
+    <string name="agregartareaRecordatorio">Agregar recordatorio</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -16,5 +24,6 @@
     <string name="botonAgregarEvento">Agregar evento</string>
     <string name="botonAgregarHorario">Agregar horario</string>
     <string name="botonConfiguraciones">Configuraciones</string>
+    <string name="botonGuardar">Guardar</string>
 
 </resources>
