@@ -1,21 +1,23 @@
 package com.classhub.agendapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
-public class MenuPrincipalActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class MenuPrincipalActivity extends AppCompatActivity{
     private TabLayout pestannas;
     private ViewPager actividades;
     private FloatingActionButton agregar;
@@ -25,12 +27,34 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
     private boolean estadoBotonAgregar = false;
 
-    MenuPestannasControlador controladorPestannas;
+    MenuPestannasControlador controlador;
+
+/*    ArrayList<ActividadDatos> listaActividades;
+    RecyclerView recycleActividades;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
+
+/*        listaActividades = new ArrayList<>();
+        recycleActividades = findViewById(R.id.recyclerIdProximos);
+        recycleActividades.setLayoutManager(new LinearLayoutManager(this));
+
+        llenarActividades();
+
+        AdapterDatosProximos adapter = new AdapterDatosProximos(listaActividades);
+
+        adapter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),
+                        "Abriendo: " + listaActividades.get(recycleActividades.getChildAdapterPosition(view)).getTitulo(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        recycleActividades.setAdapter(adapter);*/
 
         pestannas = findViewById(R.id.menuprincipalTabLayoutPestannas);
         actividades = findViewById(R.id.menuprincipalViewPagerActividades);
@@ -39,8 +63,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         agregarEvento = findViewById(R.id.menuprincipalBotonAgregarEvento);
         agregarHorario = findViewById(R.id.menuprincipalBotonAgregarHorario);
 
-        controladorPestannas = new MenuPestannasControlador(getSupportFragmentManager(), pestannas.getTabCount());
-        actividades.setAdapter(controladorPestannas);
+        controlador = new MenuPestannasControlador(getSupportFragmentManager(), pestannas.getTabCount());
+        actividades.setAdapter(controlador);
 
         pestannas.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -49,16 +73,16 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
                 switch (tab.getPosition()){
                     case 0:
-                        controladorPestannas.notifyDataSetChanged();
+                        controlador.notifyDataSetChanged();
                         break;
                     case 1:
-                        controladorPestannas.notifyDataSetChanged();
+                        controlador.notifyDataSetChanged();
                         break;
                     case 2:
-                        controladorPestannas.notifyDataSetChanged();
+                        controlador.notifyDataSetChanged();
                         break;
                     case 3:
-                        controladorPestannas.notifyDataSetChanged();
+                        controlador.notifyDataSetChanged();
                         break;
                 }
             }
@@ -131,6 +155,12 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         });
     }
 
+    /*private void llenarActividades() {
+        listaActividades.add(new ActividadDatos("Planeación estratégica y Habilidades directivas", "De 9:30am a 11:10am", R.drawable.icono_horario));
+        listaActividades.add(new ActividadDatos("Matemáticas", "Entregar los ejercicios de la página 34 y 35", R.drawable.icono_tareas));
+        listaActividades.add(new ActividadDatos("Examen de ciencias", "De 12:50am a 13:40am", R.drawable.icono_eventos));
+    }*/
+
     public boolean onCreateOptionsMenu (Menu menu){
         getMenuInflater().inflate(R.menu.vista_menu_principal_overflow, menu);
         return true;
@@ -141,5 +171,4 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         startActivity(configuraciones);
         return super.onOptionsItemSelected(item);
     }
-
 }
