@@ -104,6 +104,12 @@
                 android:visibility="invisible"
                 tools:visibility="visible" />
 
+            <androidx.constraintlayout.utils.widget.MockView
+                android:id="@+id/mockView2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:visibility="invisible" />
+
         </LinearLayout>
     </ScrollView>
 
