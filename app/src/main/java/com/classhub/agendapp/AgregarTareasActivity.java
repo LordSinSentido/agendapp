@@ -93,7 +93,7 @@ public class AgregarTareasActivity extends AppCompatActivity {
                 if (estadoDeRecordatorio.isChecked()) {
                     recordatorio.setVisibility(View.VISIBLE);
                 } else {
-                    recordatorio.setVisibility(View.INVISIBLE);
+                    recordatorio.setVisibility(View.GONE);
                 }
             }
         });
