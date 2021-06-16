@@ -6,4 +6,125 @@
     android:layout_height="match_parent"
     tools:context=".AgregarTareasActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/agregartareaEntradaTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:hint="@string/agregartareaTitulo"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/agregartareaEntradaDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/agregartareaDescripcion"
+                android:inputType="textMultiLine"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/agregartareaEntradaFechaDeFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:ems="10"
+                android:hint="@string/agregartareaFechaDeFin"
+                android:inputType="date"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/agregartareaEntradaHoraDeFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:clickable="false"
+                android:ems="10"
+                android:hint="@string/agregartareaHoraDeFin"
+                android:importantForAutofill="no"
+                android:inputType="time" />
+
+            <TextView
+                android:id="@+id/agregartareaTextoTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="@string/agregartareaTipo" />
+
+            <Spinner
+                android:id="@+id/agregartareaSpinnerTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp" />
+
+            <CheckBox
+                android:id="@+id/agregartareaCheckRecordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="@string/agregartareaRecordatorio" />
+
+            <Spinner
+                android:id="@+id/agregartareaSpinnerRecordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:visibility="invisible"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/agregartareaBotonGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/colorSecundario"
+        android:clickable="true"
+        android:contentDescription="@string/botonGuardar"
+        android:elevation="25dp"
+        android:focusable="true"
+        android:onClick="guardar"
+        android:tint="@color/colorTextoClaro"
+        app:backgroundTint="@color/colorSecundario"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorSecundarioClaro"
+        app:srcCompat="@drawable/icono_guardar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
