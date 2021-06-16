@@ -6,4 +6,141 @@
     android:layout_height="match_parent"
     tools:context=".AgregarHorariosActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/agregarhorarioEntradaTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/agregarhorarioTitulo"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/agregarhorarioEntradaDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/agregarhorarioDescripcion"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/agregarhorarioEntradaFechaDeInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/agregarhorarioFechaDeInicio"
+                android:importantForAutofill="no"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/agregarhorarioEntradaHoraDeInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/agregarhorarioHoraDeInicio"
+                android:importantForAutofill="no"
+                android:inputType="time" />
+
+            <EditText
+                android:id="@+id/agregarhorarioEntradaHoraDeFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/agregarhorarioHoraDeFin"
+                android:importantForAutofill="no"
+                android:inputType="time" />
+
+            <EditText
+                android:id="@+id/agregarhorarioEntradaUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/agregarhorarioUbicacion"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName" />
+
+            <CheckBox
+                android:id="@+id/agregarhorarioCheckRecordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="@string/agregarhorarioRecordatorio" />
+
+            <Spinner
+                android:id="@+id/agregarhorarioSpinnerRecordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_spinner"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <androidx.constraintlayout.utils.widget.MockView
+                android:id="@+id/mockView3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/agregarhorarioBotonGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/colorSecundario"
+        android:clickable="true"
+        android:contentDescription="@string/botonGuardar"
+        android:elevation="25dp"
+        android:focusable="true"
+        android:onClick="guardar"
+        android:tint="@color/colorTextoClaro"
+        app:backgroundTint="@color/colorSecundario"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorSecundarioClaro"
+        app:srcCompat="@drawable/icono_guardar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
