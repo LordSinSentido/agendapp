@@ -25,5 +25,7 @@
     <string name="botonAgregarHorario">Agregar horario</string>
     <string name="botonConfiguraciones">Configuraciones</string>
     <string name="botonGuardar">Guardar</string>
+    <string name="botonEscogerHora">Escoger hora</string>
+    <string name="botonEscogerFecha">Escoger fecha</string>
 
 </resources>
