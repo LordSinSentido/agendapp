@@ -3,10 +3,15 @@ package com.classhub.agendapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +28,9 @@ public class ProximosFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    RecyclerView recyclerProximos;
+    ArrayList<ActividadDatos> listaActividades;
 
     public ProximosFragment() {
         // Required empty public constructor
@@ -58,7 +66,32 @@ public class ProximosFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_proximos, container, false);
+        View vista = inflater.inflate(R.layout.fragment_proximos, container, false);
+
+        listaActividades = new ArrayList<>();
+        recyclerProximos = vista.findViewById(R.id.recyclerIdProximos);
+        recyclerProximos.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        llenarLista();
+
+        AdapterDatosProximos adpater = new AdapterDatosProximos(listaActividades);
+        adpater.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getContext(),
+                        "Abriendo: " + listaActividades.get(recyclerProximos.getChildAdapterPosition(view)).getTitulo(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+        recyclerProximos.setAdapter(adpater);
+
+        return vista;
+    }
+
+    private void llenarLista() {
+
+        listaActividades.add(new ActividadDatos("Planeación estratégica y Habilidades directivas", "De 9:30am a 11:10am", R.drawable.icono_horario));
+        listaActividades.add(new ActividadDatos("Matemáticas", "Entregar los ejercicios de la página 34 y 35", R.drawable.icono_tareas));
+        listaActividades.add(new ActividadDatos("Examen de ciencias", "De 12:50am a 13:40am", R.drawable.icono_eventos));
     }
 }
