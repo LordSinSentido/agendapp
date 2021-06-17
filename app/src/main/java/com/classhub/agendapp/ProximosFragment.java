@@ -82,7 +82,7 @@ public class ProximosFragment extends Fragment {
         recyclerTareas.setLayoutManager(new GridLayoutManager(getActivity(), 1));
 
         SQLiteDatabase db = admin.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * from tareas join eventos on tareas.tipo = eventos.tipo", null);
+        Cursor cursor = db.rawQuery("SELECT * from tareas", null);
 
         cantidad = cursor.getCount();
 
