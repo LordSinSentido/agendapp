@@ -63,6 +63,26 @@
     <string name="mostrarhorarioUbicacion">Ubicacion</string>
     <string name="mostrarhorarioRecordatorio">Recordatorio</string>
 
+    <!-- Editar evento -->
+    <string name="editareventoTitulo">Titulo</string>
+    <string name="editareventoDescripcion">Descripcion</string>
+    <string name="editareventoFechaDeInicio">Fecha de inicio</string>
+    <string name="editareventoHoraDeInicio">Hora de inicio</string>
+    <string name="editareventoFechaDeFin">Fecha de finalizacion</string>
+    <string name="editareventoHoraDeFin">Hora de finalizacion</string>
+    <string name="editareventoUbicacion">Ubicacion</string>
+    <string name="editareventoTipo">Selecciona el tipo de evento</string>
+    <string name="editareventoRecordatorio">Agregar recordatorio</string>
+
+    <!-- Editar horario -->
+    <string name="editarhorarioTitulo">Nombre de la materia</string>
+    <string name="editarhorarioDescripcion">Descripcion</string>
+    <string name="editarhorarioFechaDeInicio">Fecha</string>
+    <string name="editarhorarioHoraDeInicio">Hora de inicio</string>
+    <string name="editarhorarioHoraDeFin">Hora de finalizacion</string>
+    <string name="editarhorarioUbicacion">Ubicacion</string>
+    <string name="editarhorarioRecordatorio">Agregar recordatorio</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

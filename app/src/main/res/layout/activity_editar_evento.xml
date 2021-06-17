@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarEventoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/editareventoEntradaTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoTitulo"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoDescripcion"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaFechaDeInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoFechaDeInicio"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaHoraDeInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoHoraDeInicio"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaFechaDeFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoFechaDeFin"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaHoraDeFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoHoraDeFin"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoUbicacion"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/editareventoTextoTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="@string/editareventoTipo" />
+
+            <Spinner
+                android:id="@+id/editareventoSpinnerTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_spinner" />
+
+            <CheckBox
+                android:id="@+id/editareventoCheckRecordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="@string/editareventoRecordatorio" />
+
+            <Spinner
+                android:id="@+id/editareventoSpinnerRecordatorio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_spinner"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <androidx.constraintlayout.utils.widget.MockView
+                android:id="@+id/mockView6"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:visibility="invisible"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editareventoBotonGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/colorSecundario"
+        android:clickable="true"
+        android:contentDescription="@string/botonGuardar"
+        android:focusable="true"
+        android:tint="@color/colorTextoClaro"
+        app:backgroundTint="@color/colorSecundario"
+        app:elevation="25dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorSecundarioClaro"
+        app:srcCompat="@drawable/icono_guardar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
