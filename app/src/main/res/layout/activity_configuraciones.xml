@@ -4,32 +4,4 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfiguracionesActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/botonTareas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="tareas"
-            android:text="Tareas" />
-
-        <Button
-            android:id="@+id/BotonEventos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="evento"
-            android:text="Eventos" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="horario"
-            android:text="Horarios" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".ConfiguracionesActivity"/>
