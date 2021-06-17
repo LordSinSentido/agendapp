@@ -2,29 +2,59 @@ package com.classhub.agendapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
-
 public class MostrarTareaActivity extends AppCompatActivity {
-    private TextView prueba;
+    private TextView titulo;
+    private TextView descripcion;
+    private TextView fechaDeFin;
+    private TextView horaDeFin;
+    private TextView tipo;
+    private TextView recordatorio;
+
+    private int id;
+
     ActividadDatos datos;
+    BaseDeDatosControlador admin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_tarea);
 
-        prueba = findViewById(R.id.prueba);
-        datos = (ActividadDatos) getIntent().getSerializableExtra("datos");
+        titulo = findViewById(R.id.mostrartareaTextoTituloR);
+        descripcion = findViewById(R.id.mostrartareaTextoDescripcionR);
+        fechaDeFin = findViewById(R.id.mostrartareaTextoFechaDeFinR);
+        horaDeFin = findViewById(R.id.mostrartareaTextoHoraDeFinR);
+        tipo = findViewById(R.id.mostrartareaTextoTipoR);
+        recordatorio = findViewById(R.id.mostrartareaTextoRecordatorioR);
 
-        prueba.setText(datos.getTitulo() + "" + datos.getId());
+        datos = (ActividadDatos) getIntent().getSerializableExtra("datos");
+        admin = new BaseDeDatosControlador(this, "baseDeDatos.db", null, 1);
+
+        id = datos.getId();
+
+        SQLiteDatabase baseDeDatos = admin.getReadableDatabase();
+        Cursor datos = baseDeDatos.rawQuery("select * from tareas where id = " + id, null);
+
+        int totalDeRegistros = datos.getCount();
+
+        if (totalDeRegistros > 0) {
+            datos.moveToFirst();
+            titulo.setText(datos.getString(1));
+            descripcion.setText(datos.getString(2));
+            fechaDeFin.setText(datos.getString(6));
+            horaDeFin.setText(datos.getString(7));
+            tipo.setText(datos.getString(4));
+            recordatorio.setText(datos.getString(5));
+        }
+
     }
 
     public boolean onCreateOptionsMenu (Menu menu) {
