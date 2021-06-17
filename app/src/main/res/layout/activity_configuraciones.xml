@@ -22,7 +22,7 @@
             android:id="@+id/BotonEventos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="Evento"
+            android:onClick="evento"
             android:text="Eventos" />
 
         <Button

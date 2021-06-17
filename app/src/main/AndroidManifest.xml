@@ -13,6 +13,7 @@
         <activity android:name=".AgregarEventosActivity" />
         <activity android:name=".AgregarTareasActivity" />
         <activity android:name=".MostrarTareaActivity" />
+        <activity android:name=".MostrarEventoActivity" />
         <activity android:name=".ConfiguracionesActivity" />
         <activity android:name=".MenuPrincipalActivity" />
         <activity android:name=".MainActivity">

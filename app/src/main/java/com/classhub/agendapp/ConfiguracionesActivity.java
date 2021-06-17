@@ -18,4 +18,9 @@ public class ConfiguracionesActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MostrarTareaActivity.class);
         startActivity(intent);
     }
+
+    public void evento (View view){
+        Intent intent = new Intent(this, MostrarEventoActivity.class);
+        startActivity(intent);
+    }
 }
