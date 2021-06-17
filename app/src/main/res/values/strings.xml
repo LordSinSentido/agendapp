@@ -43,6 +43,26 @@
     <string name="mostrartareaTipo">Tipo de actividad</string>
     <string name="mostrartareaRecordatorio">Recordatorio</string>
 
+    <!-- Mostrar evento -->
+    <string name="mostrareventoTitulo">Titulo</string>
+    <string name="mostrareventoDescripcion">Descripcion</string>
+    <string name="mostrareventoFechaDeInicio">Fecha de inicio</string>
+    <string name="mostrareventoHoraDeInicio">Hora de inicio</string>
+    <string name="mostrareventoFechaDeFin">Fecha de finalizacion</string>
+    <string name="mostrareventoHoraDeFin">Hora de finalizacion</string>
+    <string name="mostrareventoUbicacion">Ubicacion</string>
+    <string name="mostrareventoTipo">Tipo de evento</string>
+    <string name="mostrareventoRecordatorio">Recordatorio</string>
+
+    <!-- Mostrar horario -->
+    <string name="mostrarhorarioTitulo">Nombre de la materia</string>
+    <string name="mostrarhorarioDescripcion">Descripcion</string>
+    <string name="mostrarhorarioFechaDeInicio">Fecha</string>
+    <string name="mostrarhorarioHoraDeInicio">Hora de inicio</string>
+    <string name="mostrarhorarioHoraDeFin">Hora de finalizacion</string>
+    <string name="mostrarhorarioUbicacion">Ubicacion</string>
+    <string name="mostrarhorarioRecordatorio">Recordatorio</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
