@@ -47,5 +47,6 @@
     <string name="botonGuardar">Guardar</string>
     <string name="botonEscogerHora">Escoger hora</string>
     <string name="botonEscogerFecha">Escoger fecha</string>
+    <string name="botonBorrar">Borrar</string>
 
 </resources>
