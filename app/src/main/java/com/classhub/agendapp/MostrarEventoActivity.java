@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
@@ -25,8 +26,7 @@ public class MostrarEventoActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected (MenuItem item){
-        View view = new View(this, null);
-        Snackbar.make(this, view, "Si funciona", BaseTransientBottomBar.LENGTH_LONG).show();
+        Toast.makeText(this, "Si funciona", Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
     }
 
