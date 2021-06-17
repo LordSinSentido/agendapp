@@ -81,7 +81,7 @@ public class TareasFragment extends Fragment {
         recyclerTareas.setLayoutManager(new GridLayoutManager(getActivity(), 1));
 
         SQLiteDatabase db = admin.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM tareas", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM tareas order by fechaDeFin asc, horaDeFin asc", null);
 
         cantidad = cursor.getCount();
 
