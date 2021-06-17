@@ -1,5 +1,6 @@
 package com.classhub.agendapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -91,6 +92,8 @@ public class TareasFragment extends Fragment {
                 actividadDatos = new ActividadDatos();
                 actividadDatos.setTitulo(cursor.getString(1));
                 actividadDatos.setDescripcion(cursor.getString(2));
+                actividadDatos.setTipo(cursor.getString(4));
+                actividadDatos.setId(cursor.getInt(0));
                 actividadDatos.setImagen(R.drawable.icono_tareas);
                 listaActividades.add(actividadDatos);
             }while(cursor.moveToNext());
@@ -103,9 +106,13 @@ public class TareasFragment extends Fragment {
         adpater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(),
-                        "Abriendo: " + listaActividades.get(recyclerTareas.getChildAdapterPosition(view)).getTitulo(),
-                        Toast.LENGTH_SHORT).show();
+                Intent tarea = new Intent(getContext(), MostrarTareaActivity.class);
+                tarea.putExtra("datos", listaActividades.get(recyclerTareas.getChildAdapterPosition(view)));
+                startActivity(tarea);
+
+                /*Toast.makeText(getContext(),
+                        "Abriendo: " + listaActividades.get(recyclerTareas.getChildAdapterPosition(view)).getId(),
+                        Toast.LENGTH_SHORT).show();*/
             }
         });
         recyclerTareas.setAdapter(adpater);

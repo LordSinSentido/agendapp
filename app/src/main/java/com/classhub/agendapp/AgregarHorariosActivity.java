@@ -87,6 +87,8 @@ public class AgregarHorariosActivity extends AppCompatActivity {
             } else {
                 datosAGuardar.put("descripcion", "");
             }
+            datosAGuardar.put("prioridad", 1);
+            datosAGuardar.put("tipo", "Horario");
             datosAGuardar.put("fechaDeInicio", fechaDeInicio.getText().toString());
             datosAGuardar.put("horaDeInicio", horaDeFin.getText().toString());
             datosAGuardar.put("horaDeFin", horaDeFin.getText().toString());

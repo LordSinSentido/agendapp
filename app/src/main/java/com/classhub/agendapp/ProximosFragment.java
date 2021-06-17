@@ -90,9 +90,5 @@ public class ProximosFragment extends Fragment {
     }
 
     private void llenarLista() {
-
-        listaActividades.add(new ActividadDatos("Planeación estratégica y Habilidades directivas", "De 9:30am a 11:10am", R.drawable.icono_horario));
-        listaActividades.add(new ActividadDatos("Matemáticas", "Entregar los ejercicios de la página 34 y 35", R.drawable.icono_tareas));
-        listaActividades.add(new ActividadDatos("Examen de ciencias", "De 12:50am a 13:40am", R.drawable.icono_eventos));
     }
 }

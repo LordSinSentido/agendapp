@@ -6,17 +6,25 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MostrarTareaActivity extends AppCompatActivity {
+    private TextView prueba;
+    ActividadDatos datos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_tarea);
+
+        prueba = findViewById(R.id.prueba);
+        datos = (ActividadDatos) getIntent().getSerializableExtra("datos");
+
+        prueba.setText(datos.getTitulo() + "" + datos.getId());
     }
 
     public boolean onCreateOptionsMenu (Menu menu) {
@@ -28,4 +36,6 @@ public class MostrarTareaActivity extends AppCompatActivity {
         Toast.makeText(this, "Si funciona", Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
     }
+
+
 }
