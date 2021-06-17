@@ -63,6 +63,14 @@
     <string name="mostrarhorarioUbicacion">Ubicacion</string>
     <string name="mostrarhorarioRecordatorio">Recordatorio</string>
 
+    <!-- Editar tarea -->
+    <string name="editartareaTitulo">Nombre de la materia</string>
+    <string name="editartareaDescripcion">Descripcion</string>
+    <string name="editartareaFechaDeFin">Fecha de entrega</string>
+    <string name="editartareaHoraDeFin">Hora de entrega</string>
+    <string name="editartareaTipo">Selecciona el tipo de actividad</string>
+    <string name="editartareaRecordatorio">Agregar recordatorio</string>
+
     <!-- Editar evento -->
     <string name="editareventoTitulo">Titulo</string>
     <string name="editareventoDescripcion">Descripcion</string>

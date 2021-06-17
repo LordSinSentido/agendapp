@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Agendapp">
-        <activity android:name=".MostrarHorarioActivity"></activity>
+        <activity android:name=".EditarHorarioActivity"></activity>
+        <activity android:name=".EditarEventoActivity" />
+        <activity android:name=".EditarTareaActivity" />
+        <activity android:name=".MostrarHorarioActivity" />
         <activity android:name=".AgregarHorariosActivity" />
         <activity android:name=".AgregarEventosActivity" />
         <activity android:name=".AgregarTareasActivity" />
