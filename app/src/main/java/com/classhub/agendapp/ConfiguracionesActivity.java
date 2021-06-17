@@ -13,19 +13,4 @@ public class ConfiguracionesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuraciones);
     }
-
-    public void tareas (View view) {
-        Intent intent = new Intent(this, MostrarTareaActivity.class);
-        startActivity(intent);
-    }
-
-    public void evento (View view){
-        Intent intent = new Intent(this, MostrarEventoActivity.class);
-        startActivity(intent);
-    }
-
-    public void horario (View view){
-        Intent intent = new Intent(this, MostrarHorarioActivity.class);
-        startActivity(intent);
-    }
 }
