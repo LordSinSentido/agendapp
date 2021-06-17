@@ -22,122 +22,149 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/mostrarhorarioTextoTitulo"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/mostrarhorarioTitulo"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/mostrarhorarioTextoTitulo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="@string/mostrarhorarioTitulo"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/mostrarhorarioTextoTituloR"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="@string/defectoVacio"
-                        android:textSize="15sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/mostrarhorarioTextoTituloR"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/defectoVacio"
+                    android:textSize="15sp" />
+            </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/mostrarhorarioTextoDescripcion"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="@string/mostrarhorarioDescripcion"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
 
-                    <TextView
-                        android:id="@+id/mostrarhorarioTextoDescripcionR"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="@string/defectoVacio"
-                        android:textSize="15sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/mostrarhorarioTextoDescripcion"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/mostrarhorarioDescripcion"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                <TextView
+                    android:id="@+id/mostrarhorarioTextoDescripcionR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/defectoVacio"
+                    android:textSize="15sp" />
+            </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/mostrarhorarioUbicacion"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/mostrarhorarioUbicacion"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
 
-                        <TextView
-                            android:id="@+id/mostrarhorarioUbicacionR"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/defectoVacio"
-                            android:textSize="15sp" />
-                    </LinearLayout>
+                <TextView
+                    android:id="@+id/mostrarhorarioUbicacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/mostrarhorarioUbicacion"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/mostrarhorarioTextoFechaDeInicio"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="@string/mostrarhorarioFechaDeInicio"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/mostrarhorarioUbicacionR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/defectoVacio"
+                    android:textSize="15sp" />
+            </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/mostrarhorarioTextoFechaDeInicioR"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="@string/defectoVacio"
-                        android:textSize="15sp" />
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+
+                <TextView
+                    android:id="@+id/mostrarhorarioTextoFechaDeInicio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/mostrarhorarioFechaDeInicio"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mostrarhorarioTextoFechaDeInicioR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/defectoVacio"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
 
                 <TextView
                     android:id="@+id/mostrarhorarioHoraDeInicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
                     android:text="@string/mostrarhorarioHoraDeInicio"
                     android:textSize="20sp"
@@ -158,14 +185,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
 
                 <TextView
                     android:id="@+id/mostrarhorarioTextoHoraDeFin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
                     android:text="@string/mostrarhorarioHoraDeFin"
                     android:textSize="20sp"
@@ -185,14 +217,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
 
                 <TextView
                     android:id="@+id/mostrarhorarioTextoRecordatorio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="15dp"
                     android:text="@string/mostrarhorarioRecordatorio"
                     android:textSize="20sp"
@@ -235,5 +272,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="@color/colorSecundarioClaro"
-        app:srcCompat="@drawable/icono_agregar" />
+        app:srcCompat="@drawable/icono_editar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

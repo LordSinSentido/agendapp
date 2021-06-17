@@ -22,123 +22,144 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/mostrartareaTextoTitulo"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginStart="15dp"
+                    android:text="@string/mostrartareaTitulo"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/mostrartareaTextoTitulo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="@string/mostrartareaTitulo"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/mostrartareaTextoTituloR"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="@string/defectoVacio"
-                        android:textSize="15sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/mostrartareaTextoTituloR"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/defectoVacio"
+                    android:textSize="15sp" />
+            </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/mostrartareaTextoDescripcion"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="@string/mostrartareaDescripcion"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
 
-                    <TextView
-                        android:id="@+id/mostrartareaTextoDescripcionR"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="15dp"
-                        android:text="@string/defectoVacio"
-                        android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/mostrartareaTextoDescripcion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/mostrartareaDescripcion"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                <TextView
+                    android:id="@+id/mostrartareaTextoDescripcionR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/defectoVacio"
+                    android:textSize="15sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
+            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/mostrartareaTextoTipo"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginTop="15dp"
-                                android:layout_marginEnd="15dp"
-                                android:text="@string/mostrartareaTipo"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
 
-                            <TextView
-                                android:id="@+id/mostrartareaTextoTipoR"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="15dp"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginEnd="15dp"
-                                android:text="@string/defectoVacio"
-                                android:textSize="15sp" />
-                        </LinearLayout>
+                <TextView
+                    android:id="@+id/mostrartareaTextoTipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/mostrartareaTipo"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/mostrartareaTextoFechaDeFin"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="15dp"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/mostrartareaFechaDeFin"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/mostrartareaTextoTipoR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/defectoVacio"
+                    android:textSize="15sp" />
+            </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/mostrartareaTextoFechaDeFinR"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="15dp"
-                            android:text="@string/defectoVacio"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:id="@+id/mostrartareaTextoFechaDeFin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="@string/mostrartareaFechaDeFin"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mostrartareaTextoFechaDeFinR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/defectoVacio"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
 
                 <TextView
                     android:id="@+id/mostrartareaTextoHoraDeFin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
                     android:text="@string/mostrartareaHoraDeFin"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -157,15 +178,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginStart="-0.5dp"
+                android:layout_marginEnd="-0.5dp"
+                android:layout_marginBottom="-0.5dp"
+                android:background="@drawable/item_info"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp">
 
                 <TextView
                     android:id="@+id/mostrartareaTextoRecordatorio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="15dp"
                     android:text="@string/mostrartareaRecordatorio"
                     android:textSize="20sp"
                     android:textStyle="bold" />
@@ -207,6 +232,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="@color/colorSecundarioClaro"
-        app:srcCompat="@drawable/icono_agregar" />
+        app:srcCompat="@drawable/icono_editar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
