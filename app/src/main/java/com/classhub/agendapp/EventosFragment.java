@@ -1,5 +1,6 @@
 package com.classhub.agendapp;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -90,6 +91,8 @@ public class EventosFragment extends Fragment {
                 actividadDatos = new ActividadDatos();
                 actividadDatos.setTitulo(cursor.getString(1));
                 actividadDatos.setDescripcion(cursor.getString(2));
+                actividadDatos.setTipo(cursor.getString(4));
+                actividadDatos.setId(cursor.getInt(0));
                 actividadDatos.setImagen(R.drawable.icono_tareas);
                 listaActividades.add(actividadDatos);
             }while(cursor.moveToNext());
@@ -102,9 +105,9 @@ public class EventosFragment extends Fragment {
         adpater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(),
-                        "Abriendo: " + listaActividades.get(recyclerEventos.getChildAdapterPosition(view)).getTitulo(),
-                        Toast.LENGTH_SHORT).show();
+                Intent tarea = new Intent(getContext(), MostrarEventoActivity.class);
+                tarea.putExtra("datos", listaActividades.get(recyclerEventos.getChildAdapterPosition(view)));
+                startActivity(tarea);
             }
         });
         recyclerEventos.setAdapter(adpater);

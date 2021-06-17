@@ -109,10 +109,6 @@ public class TareasFragment extends Fragment {
                 Intent tarea = new Intent(getContext(), MostrarTareaActivity.class);
                 tarea.putExtra("datos", listaActividades.get(recyclerTareas.getChildAdapterPosition(view)));
                 startActivity(tarea);
-
-                /*Toast.makeText(getContext(),
-                        "Abriendo: " + listaActividades.get(recyclerTareas.getChildAdapterPosition(view)).getId(),
-                        Toast.LENGTH_SHORT).show();*/
             }
         });
         recyclerTareas.setAdapter(adpater);

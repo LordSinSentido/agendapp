@@ -1,5 +1,8 @@
 package com.classhub.agendapp;
 
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -30,8 +33,10 @@ public class ProximosFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    RecyclerView recyclerProximos;
+    RecyclerView recyclerTareas;
     ArrayList<ActividadDatos> listaActividades;
+    BaseDeDatosControlador admin;
+    int cantidad = 0;
 
     public ProximosFragment() {
         // Required empty public constructor
@@ -69,26 +74,45 @@ public class ProximosFragment extends Fragment {
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_proximos, container, false);
 
-        listaActividades = new ArrayList<>();
-        recyclerProximos = vista.findViewById(R.id.recyclerIdProximos);
-        recyclerProximos.setLayoutManager(new GridLayoutManager(getActivity(), 1));
+        admin = new BaseDeDatosControlador(getContext(), "baseDeDatos.db", null, 1);
 
-        llenarLista();
+        ActividadDatos actividadDatos = null;
+        listaActividades = new ArrayList<>();
+        recyclerTareas = vista.findViewById(R.id.recyclerIdProximos);
+        recyclerTareas.setLayoutManager(new GridLayoutManager(getActivity(), 1));
+
+        SQLiteDatabase db = admin.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * from tareas join eventos on tareas.tipo = eventos.tipo", null);
+
+        cantidad = cursor.getCount();
+
+        if(cantidad>0){
+            cursor.moveToFirst();
+            do{
+                actividadDatos = new ActividadDatos();
+                actividadDatos.setTitulo(cursor.getString(1));
+                actividadDatos.setDescripcion(cursor.getString(2));
+                actividadDatos.setTipo(cursor.getString(3));
+                actividadDatos.setId(cursor.getInt(0));
+                actividadDatos.setImagen(R.drawable.icono_tareas);
+                listaActividades.add(actividadDatos);
+            }while(cursor.moveToNext());
+        }
+        else
+            Toast.makeText(getContext(), "No se encontraron registros.", Toast.LENGTH_SHORT).show();
+        db.close();
 
         AdapterDatosProximos adpater = new AdapterDatosProximos(listaActividades);
         adpater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(),
-                        "Abriendo: " + listaActividades.get(recyclerProximos.getChildAdapterPosition(view)).getTitulo(),
-                        Toast.LENGTH_SHORT).show();
+                Intent tarea = new Intent(getContext(), MostrarTareaActivity.class);
+                tarea.putExtra("datos", listaActividades.get(recyclerTareas.getChildAdapterPosition(view)));
+                startActivity(tarea);
             }
         });
-        recyclerProximos.setAdapter(adpater);
+        recyclerTareas.setAdapter(adpater);
 
         return vista;
-    }
-
-    private void llenarLista() {
     }
 }

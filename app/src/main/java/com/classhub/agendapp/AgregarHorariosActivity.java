@@ -89,7 +89,7 @@ public class AgregarHorariosActivity extends AppCompatActivity {
             }
             datosAGuardar.put("prioridad", 1);
             datosAGuardar.put("tipo", "Horario");
-            datosAGuardar.put("fechaDeInicio", fechaDeInicio.getText().toString());
+            datosAGuardar.put("fechaDeFin", fechaDeInicio.getText().toString());
             datosAGuardar.put("horaDeInicio", horaDeFin.getText().toString());
             datosAGuardar.put("horaDeFin", horaDeFin.getText().toString());
             if (!ubicacion.getText().toString().isEmpty()) {
@@ -105,7 +105,7 @@ public class AgregarHorariosActivity extends AppCompatActivity {
 
             if (baseDeDatos != null) {
                 try {
-                    baseDeDatos.insert("tareas", null, datosAGuardar);
+                    baseDeDatos.insert("horarios", null, datosAGuardar);
                     baseDeDatos.close();
                     finish();
                 } catch (SQLException e){
