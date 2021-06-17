@@ -54,7 +54,7 @@ public class MostrarTareaActivity extends AppCompatActivity {
             tipo.setText(datos.getString(4));
             recordatorio.setText(datos.getString(5));
         }
-
+        baseDeDatos.close();
     }
 
     public boolean onCreateOptionsMenu (Menu menu) {
@@ -63,7 +63,14 @@ public class MostrarTareaActivity extends AppCompatActivity {
     }
 
     public boolean onOptionsItemSelected (MenuItem item) {
-        Toast.makeText(this, "Si funciona", Toast.LENGTH_SHORT).show();
+        SQLiteDatabase baseDeDatos = admin.getReadableDatabase();
+
+        if (baseDeDatos.delete("tareas", "id = " + id, null) > 0) {
+            Toast.makeText(this, "Se ha eliminado el elemento", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+
+        baseDeDatos.close();
         return super.onOptionsItemSelected(item);
     }
 
