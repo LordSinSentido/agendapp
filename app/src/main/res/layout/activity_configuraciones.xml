@@ -4,4 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConfiguracionesActivity"/>
+    tools:context=".ConfiguracionesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-0.5dp"
+            android:layout_marginEnd="-0.5dp"
+            android:layout_marginBottom="-0.5dp"
+            android:background="@drawable/item_info"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <CheckBox
+                android:id="@+id/configuracionesCheckTareas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/configuracionesTareas" />
+
+            <Spinner
+                android:id="@+id/configuracionesSpinnerTareas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/item_spinner"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-0.5dp"
+            android:layout_marginEnd="-0.5dp"
+            android:layout_marginBottom="-0.5dp"
+            android:background="@drawable/item_info"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <CheckBox
+                android:id="@+id/configuracionesCheckEventos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/configuracionesEventos" />
+
+            <Spinner
+                android:id="@+id/configuracionesSpinnerEventos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/item_spinner"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-0.5dp"
+            android:layout_marginEnd="-0.5dp"
+            android:layout_marginBottom="-0.5dp"
+            android:background="@drawable/item_info"
+            android:orientation="vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <CheckBox
+                android:id="@+id/configuracionesCheckHorarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/configuracionesHorarios" />
+
+            <Spinner
+                android:id="@+id/configuracionesSpinnerHorarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/item_spinner"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/colorSecundario"
+        android:clickable="true"
+        android:contentDescription="@string/botonAgregar"
+        android:elevation="25dp"
+        android:focusable="true"
+        android:onClick="gurdar"
+        android:tint="@color/colorTextoClaro"
+        app:backgroundTint="@color/colorSecundario"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/colorSecundarioClaro"
+        app:srcCompat="@drawable/icono_guardar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.classhub.agendapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -26,7 +27,18 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
+        SharedPreferences configuraciones = getSharedPreferences("config.dat", MODE_PRIVATE);
+
+        if (!configuraciones.getBoolean("existe", false)) {
+            SharedPreferences.Editor editar = configuraciones.edit();
+            editar.putString("tareasRecordatorio", "Sin recordatorio");
+            editar.putString("eventosRecordatorio", "Sin recordatorio");
+            editar.putString("horariosRecordatorio", "Sin recordatorio");
+            editar.putBoolean("existe", true);
+            editar.apply();
+        }
+
         Timer espera = new Timer();
-        espera.schedule(actividad, 2000);
+        espera.schedule(actividad, 0);
     }
 }
