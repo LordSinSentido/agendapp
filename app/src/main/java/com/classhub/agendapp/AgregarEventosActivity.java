@@ -3,6 +3,7 @@ package com.classhub.agendapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.SharedPreferences;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -97,6 +98,26 @@ public class AgregarEventosActivity extends AppCompatActivity {
                 }
             }
         });
+
+        SharedPreferences configuraciones = getSharedPreferences("config.dat", MODE_PRIVATE);
+        estadoDeRecordatorio.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (estadoDeRecordatorio.isChecked()) {
+                    recordatorio.setVisibility(View.VISIBLE);
+                } else {
+                    recordatorio.setVisibility(View.GONE);
+                }
+            }
+        });
+        if (!configuraciones.getString("eventosRecordatorio", "").equals("Sin recordatorio")) {
+            estadoDeRecordatorio.setChecked(true);
+            for (int i = 0; i < recordatorio.getCount(); i++) {
+                if (recordatorio.getItemAtPosition(i).equals(configuraciones.getString("eventosRecordatorio", ""))) {
+                    recordatorio.setSelection(i);
+                }
+            }
+        }
     }
 
     public void guardar (View view) {
