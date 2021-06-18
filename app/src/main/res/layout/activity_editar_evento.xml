@@ -155,6 +155,7 @@
         android:clickable="true"
         android:contentDescription="@string/botonGuardar"
         android:focusable="true"
+        android:onClick="editar"
         android:tint="@color/colorTextoClaro"
         app:backgroundTint="@color/colorSecundario"
         app:elevation="25dp"
