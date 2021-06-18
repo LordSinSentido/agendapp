@@ -113,5 +113,6 @@
     <string name="mensajeElimino">Se ha eliminado el elemento</string>
     <string name="mensajeEdito">Se ha editado el elemento</string>
     <string name="mensajeFaltanDatos">Rellene todos los elementos</string>
+    <string name="mensajeSinActividades">No hay actividades por mostrar</string>
 
 </resources>
