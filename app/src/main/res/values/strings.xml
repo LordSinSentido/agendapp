@@ -91,8 +91,10 @@
     <string name="editarhorarioUbicacion">Ubicación</string>
     <string name="editarhorarioRecordatorio">Agregar recordatorio</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Configuraciones -->
+    <string name="configuracionesTareas">Establecer recordatorio predeterminado para las tareas</string>
+    <string name="configuracionesEventos">Establecer recordatorio predeterminado para las eventos</string>
+    <string name="configuracionesHorarios">Establecer recordatorio predeterminado para las horarios</string>
 
     <!-- Botones -->
     <string name="botonAgregar">Agregar</string>
@@ -114,5 +116,6 @@
     <string name="mensajeEdito">Se ha editado el elemento</string>
     <string name="mensajeFaltanDatos">Rellene todos los elementos</string>
     <string name="mensajeSinActividades">No hay actividades por mostrar</string>
+    <string name="mensajeGardadoConfiguraciones">Se han guardado las configuraciones</string>
 
 </resources>
