@@ -150,7 +150,6 @@ public class ProximosFragment extends Fragment {
         adpater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), listaActividades.get(recyclerTareas.getChildAdapterPosition(view)).getTipo(), Toast.LENGTH_SHORT).show();
                 switch (listaActividades.get(recyclerTareas.getChildAdapterPosition(view)).getTipo()) {
                     case "Tarea":
                         Intent tarea = new Intent(getContext(), MostrarTareaActivity.class);
