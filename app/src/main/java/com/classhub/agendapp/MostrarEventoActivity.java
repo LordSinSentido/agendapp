@@ -2,6 +2,7 @@ package com.classhub.agendapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -91,6 +92,10 @@ public class MostrarEventoActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
+    public void editar (View view) {
+        Intent tarea = new Intent(this, EditarEventoActivity.class);
+        tarea.putExtra("id", id);
+        startActivity(tarea);
+    }
 
 }
