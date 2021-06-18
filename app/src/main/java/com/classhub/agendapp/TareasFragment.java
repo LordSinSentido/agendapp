@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class TareasFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    LinearLayout mensaje;
     RecyclerView recyclerTareas;
     ArrayList<ActividadDatos> listaActividades;
     BaseDeDatosControlador admin;
@@ -74,6 +76,7 @@ public class TareasFragment extends Fragment {
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_tareas, container, false);
 
+        mensaje = vista.findViewById(R.id.tareasSinActividades);
         admin = new BaseDeDatosControlador(getContext(), "baseDeDatos.db", null, 1);
 
         ActividadDatos actividadDatos = null;
@@ -87,6 +90,7 @@ public class TareasFragment extends Fragment {
         cantidad = cursor.getCount();
 
         if(cantidad>0){
+            mensaje.setVisibility(View.GONE);
             cursor.moveToFirst();
             do{
                 actividadDatos = new ActividadDatos();
@@ -98,8 +102,9 @@ public class TareasFragment extends Fragment {
                 listaActividades.add(actividadDatos);
             }while(cursor.moveToNext());
         }
-        else
-            Toast.makeText(getContext(), "No se encontraron registros.", Toast.LENGTH_SHORT).show();
+        else{
+            mensaje.setVisibility(View.VISIBLE);
+        }
         db.close();
 
         AdapterDatosProximos adpater = new AdapterDatosProximos(listaActividades);

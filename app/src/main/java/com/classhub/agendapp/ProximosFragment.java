@@ -10,9 +10,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -33,6 +35,7 @@ public class ProximosFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    LinearLayout mensaje;
     RecyclerView recyclerTareas;
     ArrayList<ActividadDatos> listaActividades;
     BaseDeDatosControlador admin;
@@ -74,6 +77,7 @@ public class ProximosFragment extends Fragment {
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_proximos, container, false);
 
+        mensaje = vista.findViewById(R.id.proximosSinActividades);
         admin = new BaseDeDatosControlador(getContext(), "baseDeDatos.db", null, 1);
 
         ActividadDatos actividadDatos = null;
@@ -84,9 +88,10 @@ public class ProximosFragment extends Fragment {
         SQLiteDatabase db = admin.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * from tareas", null);
 
-        cantidad = cursor.getCount();
+        cantidad = 0;
 
         if(cantidad>0){
+            mensaje.setVisibility(View.GONE);
             cursor.moveToFirst();
             do{
                 actividadDatos = new ActividadDatos();
@@ -98,8 +103,9 @@ public class ProximosFragment extends Fragment {
                 listaActividades.add(actividadDatos);
             }while(cursor.moveToNext());
         }
-        else
-            Toast.makeText(getContext(), "No se encontraron registros.", Toast.LENGTH_SHORT).show();
+        else {
+            mensaje.setVisibility(View.VISIBLE);
+        }
         db.close();
 
         AdapterDatosProximos adpater = new AdapterDatosProximos(listaActividades);

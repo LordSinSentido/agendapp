@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class EventosFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    LinearLayout mensaje;
     RecyclerView recyclerEventos;
     ArrayList<ActividadDatos> listaActividades;
     BaseDeDatosControlador admin;
@@ -73,6 +75,7 @@ public class EventosFragment extends Fragment {
                              Bundle savedInstanceState) {
         View vista = inflater.inflate(R.layout.fragment_eventos, container, false);
 
+        mensaje = vista.findViewById(R.id.eventosSinActividades);
         admin = new BaseDeDatosControlador(getContext(), "baseDeDatos.db", null, 1);
 
         ActividadDatos actividadDatos = null;
@@ -86,6 +89,7 @@ public class EventosFragment extends Fragment {
         cantidad = cursor.getCount();
 
         if(cantidad>0){
+            mensaje.setVisibility(View.GONE);
             cursor.moveToFirst();
             do{
                 actividadDatos = new ActividadDatos();
@@ -97,8 +101,9 @@ public class EventosFragment extends Fragment {
                 listaActividades.add(actividadDatos);
             }while(cursor.moveToNext());
         }
-        else
-            Toast.makeText(getContext(), "No se encontraron registros.", Toast.LENGTH_SHORT).show();
+        else {
+            mensaje.setVisibility(View.VISIBLE);
+        }
         db.close();
 
         AdapterDatosProximos adpater = new AdapterDatosProximos(listaActividades);
