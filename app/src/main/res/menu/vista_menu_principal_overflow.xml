@@ -7,6 +7,5 @@
         android:checkable="false"
         android:icon="@drawable/icono_configuracion"
         android:title="@string/botonConfiguraciones"
-        android:visible="false"
         app:showAsAction="always" />
 </menu>
