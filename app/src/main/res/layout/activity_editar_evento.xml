@@ -25,7 +25,8 @@
                 android:background="@drawable/item_entrada"
                 android:ems="10"
                 android:hint="@string/editareventoTitulo"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
 
             <EditText
                 android:id="@+id/editareventoEntradaDescripcion"
@@ -37,67 +38,8 @@
                 android:background="@drawable/item_entrada"
                 android:ems="10"
                 android:hint="@string/editareventoDescripcion"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/editareventoEntradaFechaDeInicio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="25dp"
-                android:background="@drawable/item_entrada"
-                android:ems="10"
-                android:hint="@string/editareventoFechaDeInicio"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/editareventoEntradaHoraDeInicio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="25dp"
-                android:background="@drawable/item_entrada"
-                android:ems="10"
-                android:hint="@string/editareventoHoraDeInicio"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/editareventoEntradaFechaDeFin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="25dp"
-                android:background="@drawable/item_entrada"
-                android:ems="10"
-                android:hint="@string/editareventoFechaDeFin"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/editareventoEntradaHoraDeFin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="25dp"
-                android:background="@drawable/item_entrada"
-                android:ems="10"
-                android:hint="@string/editareventoHoraDeFin"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/editareventoEntradaUbicacion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="25dp"
-                android:background="@drawable/item_entrada"
-                android:ems="10"
-                android:hint="@string/editareventoUbicacion"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
 
             <TextView
                 android:id="@+id/editareventoTextoTipo"
@@ -116,6 +58,71 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="25dp"
                 android:background="@drawable/item_spinner" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaFechaDeInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoFechaDeInicio"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaHoraDeInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoHoraDeInicio"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaFechaDeFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoFechaDeFin"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaHoraDeFin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoHoraDeFin"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/editareventoEntradaUbicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_entrada"
+                android:ems="10"
+                android:hint="@string/editareventoUbicacion"
+                android:inputType="textPersonName"
+                android:importantForAutofill="no" />
 
             <CheckBox
                 android:id="@+id/editareventoCheckRecordatorio"

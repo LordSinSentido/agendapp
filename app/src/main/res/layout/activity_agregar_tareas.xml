@@ -45,6 +45,24 @@
                 android:importantForAutofill="no"
                 android:inputType="textMultiLine" />
 
+            <TextView
+                android:id="@+id/agregartareaTextoTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="@string/agregartareaTipo" />
+
+            <Spinner
+                android:id="@+id/agregartareaSpinnerTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/item_spinner" />
+
             <EditText
                 android:id="@+id/agregartareaEntradaFechaDeFin"
                 android:layout_width="match_parent"
@@ -71,24 +89,6 @@
                 android:importantForAutofill="no"
                 android:inputType="time"
                 android:background="@drawable/item_entrada" />
-
-            <TextView
-                android:id="@+id/agregartareaTextoTipo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginEnd="25dp"
-                android:text="@string/agregartareaTipo" />
-
-            <Spinner
-                android:id="@+id/agregartareaSpinnerTipo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="25dp"
-                android:background="@drawable/item_spinner" />
 
             <CheckBox
                 android:id="@+id/agregartareaCheckRecordatorio"
