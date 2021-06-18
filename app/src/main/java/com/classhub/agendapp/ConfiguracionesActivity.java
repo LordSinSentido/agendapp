@@ -169,7 +169,7 @@ public class ConfiguracionesActivity extends AppCompatActivity {
         } else {
             editar.putString("horariosRecordatorio", "Sin recordatorio");
         }
-
+        Toast.makeText(this, R.string.mensajeGardadoConfiguraciones, Toast.LENGTH_SHORT).show();
         editar.apply();
         finish();
     }

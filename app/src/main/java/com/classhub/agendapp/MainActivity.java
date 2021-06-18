@@ -39,6 +39,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         Timer espera = new Timer();
-        espera.schedule(actividad, 2000);
+        espera.schedule(actividad, 1000);
     }
 }
