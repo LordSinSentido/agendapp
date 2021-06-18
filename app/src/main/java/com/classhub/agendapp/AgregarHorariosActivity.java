@@ -13,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
@@ -73,7 +74,6 @@ public class AgregarHorariosActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     public void guardar (View view) {
@@ -107,6 +107,7 @@ public class AgregarHorariosActivity extends AppCompatActivity {
                 try {
                     baseDeDatos.insert("horarios", null, datosAGuardar);
                     baseDeDatos.close();
+                    Toast.makeText(this, R.string.mensajeAgrego, Toast.LENGTH_SHORT).show();
                     finish();
                 } catch (SQLException e){
                     Snackbar.make(this, view, "Error: " + e.toString(), BaseTransientBottomBar.LENGTH_LONG);
@@ -114,7 +115,7 @@ public class AgregarHorariosActivity extends AppCompatActivity {
                 }
             }
         } else {
-            Snackbar.make(this, view, "Ingese todo los datos", BaseTransientBottomBar.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.mensajeFaltanDatos, Toast.LENGTH_SHORT).show();
         }
     }
 }

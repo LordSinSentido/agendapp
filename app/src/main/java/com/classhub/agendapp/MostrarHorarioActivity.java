@@ -2,11 +2,13 @@ package com.classhub.agendapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -75,5 +77,11 @@ public class MostrarHorarioActivity extends AppCompatActivity {
 
         baseDeDatos.close();
         return super.onOptionsItemSelected(item);
+    }
+
+    public void editar (View view) {
+        Intent tarea = new Intent(this, EditarHorarioActivity.class);
+        tarea.putExtra("id", id);
+        startActivity(tarea);
     }
 }
