@@ -131,6 +131,7 @@
         android:clickable="true"
         android:contentDescription="@string/botonGuardar"
         android:focusable="true"
+        android:onClick="guardar"
         android:tint="@color/colorTextoClaro"
         app:backgroundTint="@color/colorSecundario"
         app:elevation="25dp"
