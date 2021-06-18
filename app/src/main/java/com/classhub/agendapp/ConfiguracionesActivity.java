@@ -1,5 +1,6 @@
 package com.classhub.agendapp;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -31,6 +32,7 @@ public class ConfiguracionesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_configuraciones);
+        this.setTitle("Configuraciones");
 
         tareas = findViewById(R.id.configuracionesSpinnerTareas);
         eventos = findViewById(R.id.configuracionesSpinnerEventos);
