@@ -128,6 +128,7 @@ public class AgregarTareasActivity extends AppCompatActivity {
                 try {
                     baseDeDatos.insert("tareas", null, datosAGuardar);
                     baseDeDatos.close();
+                    Toast.makeText(this, R.string.mensajeAgrego, Toast.LENGTH_SHORT).show();
                     finish();
                 } catch (SQLException e){
                     Snackbar.make(this, view, "Error: " + e.toString(), BaseTransientBottomBar.LENGTH_LONG);
@@ -135,7 +136,7 @@ public class AgregarTareasActivity extends AppCompatActivity {
                 }
             }
         } else {
-            Snackbar.make(this, view, "Ingese todo los datos", BaseTransientBottomBar.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.mensajeFaltanDatos, Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -226,6 +226,7 @@
         android:contentDescription="@string/botonAgregar"
         android:elevation="25dp"
         android:focusable="true"
+        android:onClick="editar"
         android:tint="@color/colorTextoClaro"
         app:backgroundTint="@color/colorSecundario"
         app:fabSize="normal"

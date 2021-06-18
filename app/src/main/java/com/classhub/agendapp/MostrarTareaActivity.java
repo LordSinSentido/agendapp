@@ -2,11 +2,13 @@ package com.classhub.agendapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,7 +68,7 @@ public class MostrarTareaActivity extends AppCompatActivity {
         SQLiteDatabase baseDeDatos = admin.getReadableDatabase();
 
         if (baseDeDatos.delete("tareas", "id = " + id, null) > 0) {
-            Toast.makeText(this, "Se ha eliminado el elemento", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.mensajeElimino, Toast.LENGTH_SHORT).show();
             finish();
         }
 
@@ -74,5 +76,9 @@ public class MostrarTareaActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
+    public void editar (View view) {
+        Intent tarea = new Intent(this, EditarTareaActivity.class);
+        tarea.putExtra("id", id);
+        startActivity(tarea);
+    }
 }
