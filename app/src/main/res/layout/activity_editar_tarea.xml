@@ -124,11 +124,12 @@
         android:contentDescription="@string/botonGuardar"
         android:elevation="25dp"
         android:focusable="true"
+        android:onClick="editar"
         android:tint="@color/colorTextoClaro"
         app:backgroundTint="@color/colorSecundario"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="@color/colorSecundarioClaro"
-        app:srcCompat="@drawable/icono_guardar"/>
+        app:srcCompat="@drawable/icono_guardar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
