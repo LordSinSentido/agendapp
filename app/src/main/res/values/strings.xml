@@ -2,14 +2,14 @@
     <string name="app_name">Agendapp</string>
 
     <!-- Menu principal -->
-    <string name="menuprincipalTabItemProximos">Proximos</string>
+    <string name="menuprincipalTabItemProximos">Próximos</string>
     <string name="menuprincipalTabItemTareas">Tareas</string>
     <string name="menuprincipalTabItemHorario">Horario</string>
     <string name="menuprincipalTabItemEventos">Eventos</string>
 
     <!-- Agregar tarea -->
     <string name="agregartareaTitulo">Nombre de la materia</string>
-    <string name="agregartareaDescripcion">Descripcion</string>
+    <string name="agregartareaDescripcion">Descripción</string>
     <string name="agregartareaFechaDeFin">Fecha de entrega</string>
     <string name="agregartareaHoraDeFin">Hora de entrega</string>
     <string name="agregartareaTipo">Selecciona el tipo de actividad</string>
@@ -17,27 +17,27 @@
 
     <!-- Agregar evento -->
     <string name="agregareventoTitulo">Titulo</string>
-    <string name="agregareventoDescripcion">Descripcion</string>
+    <string name="agregareventoDescripcion">Descripción</string>
     <string name="agregareventoFechaDeInicio">Fecha de inicio</string>
     <string name="agregareventoHoraDeInicio">Hora de inicio</string>
-    <string name="agregareventoFechaDeFin">Fecha de finalizacion</string>
-    <string name="agregareventoHoraDeFin">Hora de finalizacion</string>
-    <string name="agregareventoUbicacion">Ubicacion</string>
+    <string name="agregareventoFechaDeFin">Fecha de finalización</string>
+    <string name="agregareventoHoraDeFin">Hora de finalización</string>
+    <string name="agregareventoUbicacion">Ubicación</string>
     <string name="agregareventoTipo">Selecciona el tipo de evento</string>
     <string name="agregareventoRecordatorio">Agregar recordatorio</string>
 
     <!-- Agregar recordatorio -->
     <string name="agregarhorarioTitulo">Nombre de la materia</string>
-    <string name="agregarhorarioDescripcion">Descripcion</string>
+    <string name="agregarhorarioDescripcion">Descripción</string>
     <string name="agregarhorarioFechaDeInicio">Fecha</string>
     <string name="agregarhorarioHoraDeInicio">Hora de inicio</string>
-    <string name="agregarhorarioHoraDeFin">Hora de finalizacion</string>
-    <string name="agregarhorarioUbicacion">Ubicacion</string>
+    <string name="agregarhorarioHoraDeFin">Hora de finalización</string>
+    <string name="agregarhorarioUbicacion">Ubicación</string>
     <string name="agregarhorarioRecordatorio">Agregar recordatorio</string>
 
     <!-- Mostrar tarea -->
     <string name="mostrartareaTitulo">Nombre de la materia</string>
-    <string name="mostrartareaDescripcion">Descripcion</string>
+    <string name="mostrartareaDescripcion">Descripción</string>
     <string name="mostrartareaFechaDeFin">Fecha de entrega</string>
     <string name="mostrartareaHoraDeFin">Hora de entrega</string>
     <string name="mostrartareaTipo">Tipo de actividad</string>
@@ -45,27 +45,27 @@
 
     <!-- Mostrar evento -->
     <string name="mostrareventoTitulo">Titulo</string>
-    <string name="mostrareventoDescripcion">Descripcion</string>
+    <string name="mostrareventoDescripcion">Descripción</string>
     <string name="mostrareventoFechaDeInicio">Fecha de inicio</string>
     <string name="mostrareventoHoraDeInicio">Hora de inicio</string>
-    <string name="mostrareventoFechaDeFin">Fecha de finalizacion</string>
-    <string name="mostrareventoHoraDeFin">Hora de finalizacion</string>
-    <string name="mostrareventoUbicacion">Ubicacion</string>
+    <string name="mostrareventoFechaDeFin">Fecha de finalización</string>
+    <string name="mostrareventoHoraDeFin">Hora de finalización</string>
+    <string name="mostrareventoUbicacion">Ubicación</string>
     <string name="mostrareventoTipo">Tipo de evento</string>
     <string name="mostrareventoRecordatorio">Recordatorio</string>
 
     <!-- Mostrar horario -->
     <string name="mostrarhorarioTitulo">Nombre de la materia</string>
-    <string name="mostrarhorarioDescripcion">Descripcion</string>
+    <string name="mostrarhorarioDescripcion">Descripción</string>
     <string name="mostrarhorarioFechaDeInicio">Fecha</string>
     <string name="mostrarhorarioHoraDeInicio">Hora de inicio</string>
-    <string name="mostrarhorarioHoraDeFin">Hora de finalizacion</string>
-    <string name="mostrarhorarioUbicacion">Ubicacion</string>
+    <string name="mostrarhorarioHoraDeFin">Hora de finalización</string>
+    <string name="mostrarhorarioUbicacion">Ubicación</string>
     <string name="mostrarhorarioRecordatorio">Recordatorio</string>
 
     <!-- Editar tarea -->
     <string name="editartareaTitulo">Nombre de la materia</string>
-    <string name="editartareaDescripcion">Descripcion</string>
+    <string name="editartareaDescripcion">Descripción</string>
     <string name="editartareaFechaDeFin">Fecha de entrega</string>
     <string name="editartareaHoraDeFin">Hora de entrega</string>
     <string name="editartareaTipo">Selecciona el tipo de actividad</string>
@@ -73,22 +73,22 @@
 
     <!-- Editar evento -->
     <string name="editareventoTitulo">Titulo</string>
-    <string name="editareventoDescripcion">Descripcion</string>
+    <string name="editareventoDescripcion">Descripción</string>
     <string name="editareventoFechaDeInicio">Fecha de inicio</string>
     <string name="editareventoHoraDeInicio">Hora de inicio</string>
-    <string name="editareventoFechaDeFin">Fecha de finalizacion</string>
-    <string name="editareventoHoraDeFin">Hora de finalizacion</string>
-    <string name="editareventoUbicacion">Ubicacion</string>
+    <string name="editareventoFechaDeFin">Fecha de finalización</string>
+    <string name="editareventoHoraDeFin">Hora de finalización</string>
+    <string name="editareventoUbicacion">Ubicación</string>
     <string name="editareventoTipo">Selecciona el tipo de evento</string>
     <string name="editareventoRecordatorio">Agregar recordatorio</string>
 
     <!-- Editar horario -->
     <string name="editarhorarioTitulo">Nombre de la materia</string>
-    <string name="editarhorarioDescripcion">Descripcion</string>
+    <string name="editarhorarioDescripcion">Descripción</string>
     <string name="editarhorarioFechaDeInicio">Fecha</string>
     <string name="editarhorarioHoraDeInicio">Hora de inicio</string>
-    <string name="editarhorarioHoraDeFin">Hora de finalizacion</string>
-    <string name="editarhorarioUbicacion">Ubicacion</string>
+    <string name="editarhorarioHoraDeFin">Hora de finalización</string>
+    <string name="editarhorarioUbicacion">Ubicación</string>
     <string name="editarhorarioRecordatorio">Agregar recordatorio</string>
 
     <!-- TODO: Remove or change this placeholder text -->
