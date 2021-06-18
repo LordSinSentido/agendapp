@@ -30,6 +30,7 @@ public class MostrarHorarioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_horario);
+        this.setTitle("Datos del horario");
 
         titulo = findViewById(R.id.mostrarhorarioTextoTituloR);
         descripcion = findViewById(R.id.mostrarhorarioTextoDescripcionR);

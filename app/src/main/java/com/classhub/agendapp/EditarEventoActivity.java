@@ -45,6 +45,7 @@ public class EditarEventoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_evento);
+        this.setTitle("Editar evento o examen");
 
         titulo = findViewById(R.id.editareventoEntradaTitulo);
         descripcion = findViewById(R.id.editareventoEntradaDescripcion);

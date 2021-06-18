@@ -46,6 +46,7 @@ public class AgregarTareasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_tareas);
+        this.setTitle("Agregar nueva tarea o proyecto");
 
         titulo = findViewById(R.id.agregartareaEntradaTitulo);
         descripcion = findViewById(R.id.agregartareaEntradaDescripcion);

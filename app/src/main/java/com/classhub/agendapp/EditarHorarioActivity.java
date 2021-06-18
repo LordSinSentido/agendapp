@@ -40,6 +40,7 @@ public class EditarHorarioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_horario);
+        this.setTitle("Editar horario");
 
         titulo = findViewById(R.id.editarhorarioEntradaTitulo);
         descripcion = findViewById(R.id.editarhorarioEntradaDescripcion);

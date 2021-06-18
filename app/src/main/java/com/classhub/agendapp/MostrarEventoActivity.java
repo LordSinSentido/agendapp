@@ -39,6 +39,7 @@ public class MostrarEventoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_evento);
+        this.setTitle("Datos del evento o examen");
 
         titulo = findViewById(R.id.mostrareventoTextoTituloR);
         descripcion = findViewById(R.id.mostrareventoTextoDescripcionR);

@@ -42,6 +42,7 @@ public class AgregarEventosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_eventos);
+        this.setTitle("Agregar nuevo evento o examen");
 
         titulo = findViewById(R.id.agregareventoEntradaTitulo);
         descripcion = findViewById(R.id.agregareventoEntradaDescripcion);

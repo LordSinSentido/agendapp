@@ -37,6 +37,7 @@ public class AgregarHorariosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_horarios);
+        this.setTitle("Agregar nuevo horario");
 
         titulo = findViewById(R.id.agregarhorarioEntradaTitulo);
         descripcion = findViewById(R.id.agregarhorarioEntradaDescripcion);

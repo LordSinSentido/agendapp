@@ -29,6 +29,7 @@ public class MostrarTareaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_tarea);
+        this.setTitle("Datos de la tarea o proyecto");
 
         titulo = findViewById(R.id.mostrartareaTextoTituloR);
         descripcion = findViewById(R.id.mostrartareaTextoDescripcionR);

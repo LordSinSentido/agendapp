@@ -42,6 +42,7 @@ public class EditarTareaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_tarea);
+        this.setTitle("Editar tarea o proyecto");
 
         titulo = findViewById(R.id.editartareaEntradaTitulo);
         descripcion = findViewById(R.id.editartareaEntradaDescripcion);
