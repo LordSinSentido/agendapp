@@ -100,7 +100,7 @@ public class ProximosFragment extends Fragment {
                 actividadDatos = new ActividadDatos();
                 actividadDatos.setTitulo(cursor.getString(1));
                 actividadDatos.setDescripcion(cursor.getString(2));
-                actividadDatos.setTipo(cursor.getString(3));
+                actividadDatos.setTipo(cursor.getString(4));
                 actividadDatos.setId(cursor.getInt(0));
                 actividadDatos.setImagen(R.drawable.icono_tareas);
                 listaActividades.add(actividadDatos);
@@ -116,7 +116,7 @@ public class ProximosFragment extends Fragment {
                 actividadDatos = new ActividadDatos();
                 actividadDatos.setTitulo(cursor.getString(1));
                 actividadDatos.setDescripcion(cursor.getString(2));
-                actividadDatos.setTipo(cursor.getString(3));
+                actividadDatos.setTipo(cursor.getString(4));
                 actividadDatos.setId(cursor.getInt(0));
                 actividadDatos.setImagen(R.drawable.icono_eventos);
                 listaActividades.add(actividadDatos);
@@ -132,7 +132,7 @@ public class ProximosFragment extends Fragment {
                 actividadDatos = new ActividadDatos();
                 actividadDatos.setTitulo(cursor.getString(1));
                 actividadDatos.setDescripcion(cursor.getString(2));
-                actividadDatos.setTipo(cursor.getString(3));
+                actividadDatos.setTipo(cursor.getString(4));
                 actividadDatos.setId(cursor.getInt(0));
                 actividadDatos.setImagen(R.drawable.icono_horario);
                 listaActividades.add(actividadDatos);
@@ -150,9 +150,35 @@ public class ProximosFragment extends Fragment {
         adpater.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent tarea = new Intent(getContext(), MostrarTareaActivity.class);
-                tarea.putExtra("datos", listaActividades.get(recyclerTareas.getChildAdapterPosition(view)));
-                startActivity(tarea);
+                Toast.makeText(getContext(), listaActividades.get(recyclerTareas.getChildAdapterPosition(view)).getTipo(), Toast.LENGTH_SHORT).show();
+                switch (listaActividades.get(recyclerTareas.getChildAdapterPosition(view)).getTipo()) {
+                    case "Tarea":
+                        Intent tarea = new Intent(getContext(), MostrarTareaActivity.class);
+                        tarea.putExtra("datos", listaActividades.get(recyclerTareas.getChildAdapterPosition(view)));
+                        startActivity(tarea);
+                        break;
+                    case "Proyecto":
+                        Intent proyecto = new Intent(getContext(), MostrarTareaActivity.class);
+                        proyecto.putExtra("datos", listaActividades.get(recyclerTareas.getChildAdapterPosition(view)));
+                        startActivity(proyecto);
+                        break;
+                    case "Evento":
+                        Intent evento = new Intent(getContext(), MostrarEventoActivity.class);
+                        evento.putExtra("datos", listaActividades.get(recyclerTareas.getChildAdapterPosition(view)));
+                        startActivity(evento);
+                        break;
+                    case "Examen":
+                        Intent examen = new Intent(getContext(), MostrarEventoActivity.class);
+                        examen.putExtra("datos", listaActividades.get(recyclerTareas.getChildAdapterPosition(view)));
+                        startActivity(examen);
+                        break;
+                    case "Horario":
+                        Intent horario = new Intent(getContext(), MostrarHorarioActivity.class);
+                        horario.putExtra("datos", listaActividades.get(recyclerTareas.getChildAdapterPosition(view)));
+                        startActivity(horario);
+                        break;
+                }
+
             }
         });
         recyclerTareas.setAdapter(adpater);
