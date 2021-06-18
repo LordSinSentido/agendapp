@@ -35,6 +35,8 @@ public class ProximosFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    private boolean hayActividad;
+
     LinearLayout mensaje;
     RecyclerView recyclerTareas;
     ArrayList<ActividadDatos> listaActividades;
@@ -86,12 +88,13 @@ public class ProximosFragment extends Fragment {
         recyclerTareas.setLayoutManager(new GridLayoutManager(getActivity(), 1));
 
         SQLiteDatabase db = admin.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * from tareas", null);
 
-        cantidad = 0;
+        hayActividad = false;
 
+        Cursor cursor = db.rawQuery("SELECT * from tareas order by fechaDeFin asc, horaDeFin asc", null);
+        cantidad = cursor.getCount();
         if(cantidad>0){
-            mensaje.setVisibility(View.GONE);
+            hayActividad = true;
             cursor.moveToFirst();
             do{
                 actividadDatos = new ActividadDatos();
@@ -103,8 +106,43 @@ public class ProximosFragment extends Fragment {
                 listaActividades.add(actividadDatos);
             }while(cursor.moveToNext());
         }
-        else {
+
+        cursor = db.rawQuery("SELECT * from eventos order by fechaDeFin asc, horaDeFin asc", null);
+        cantidad = cursor.getCount();
+        if(cantidad>0){
+            hayActividad = true;
+            cursor.moveToFirst();
+            do{
+                actividadDatos = new ActividadDatos();
+                actividadDatos.setTitulo(cursor.getString(1));
+                actividadDatos.setDescripcion(cursor.getString(2));
+                actividadDatos.setTipo(cursor.getString(3));
+                actividadDatos.setId(cursor.getInt(0));
+                actividadDatos.setImagen(R.drawable.icono_eventos);
+                listaActividades.add(actividadDatos);
+            }while(cursor.moveToNext());
+        }
+
+        cursor = db.rawQuery("SELECT * from horarios order by fechaDeFin asc, horaDeFin asc", null);
+        cantidad = cursor.getCount();
+        if(cantidad>0){
+            hayActividad = true;
+            cursor.moveToFirst();
+            do{
+                actividadDatos = new ActividadDatos();
+                actividadDatos.setTitulo(cursor.getString(1));
+                actividadDatos.setDescripcion(cursor.getString(2));
+                actividadDatos.setTipo(cursor.getString(3));
+                actividadDatos.setId(cursor.getInt(0));
+                actividadDatos.setImagen(R.drawable.icono_horario);
+                listaActividades.add(actividadDatos);
+            }while(cursor.moveToNext());
+        }
+
+        if (!hayActividad) {
             mensaje.setVisibility(View.VISIBLE);
+        } else {
+            mensaje.setVisibility(View.GONE);
         }
         db.close();
 

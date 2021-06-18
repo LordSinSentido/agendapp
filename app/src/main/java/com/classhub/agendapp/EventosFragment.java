@@ -97,7 +97,7 @@ public class EventosFragment extends Fragment {
                 actividadDatos.setDescripcion(cursor.getString(2));
                 actividadDatos.setTipo(cursor.getString(4));
                 actividadDatos.setId(cursor.getInt(0));
-                actividadDatos.setImagen(R.drawable.icono_tareas);
+                actividadDatos.setImagen(R.drawable.icono_eventos);
                 listaActividades.add(actividadDatos);
             }while(cursor.moveToNext());
         }
